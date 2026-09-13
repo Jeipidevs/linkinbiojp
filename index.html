@@ -420,7 +420,159 @@
         }
       }
     }
+  
+    /* Estilos de Status Em Breve & Toast */
+    .btn.coming-soon {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.96) 0%, rgba(246, 240, 235, 0.90) 100%) !important;
+      border: 1.5px dashed var(--gold) !important;
+      cursor: not-allowed !important;
+      position: relative;
+      overflow: hidden;
+      opacity: 0.90;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .btn.coming-soon:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 18px rgba(197, 160, 89, 0.22) !important;
+    }
+
+    .btn.coming-soon:active {
+      transform: scale(0.98);
+    }
+
+    .btn-title-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .badge-em-breve {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      padding: 3px 9px;
+      border-radius: 20px;
+      background: rgba(197, 160, 89, 0.16);
+      color: var(--terracota);
+      border: 1px solid rgba(197, 160, 89, 0.4);
+    }
+
+    .dot-amber {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--terracota);
+      animation: pulse-dot 1.8s infinite ease-in-out;
+    }
+
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.35; transform: scale(0.85); }
+    }
+
+    .btn-lock {
+      font-size: 15px;
+      margin-left: 8px;
+      flex-shrink: 0;
+      opacity: 0.85;
+      filter: grayscale(0.2);
+    }
+
+    .badge-tag {
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 3px 8px;
+      border-radius: 12px;
+      background: #F0EAE1;
+      color: var(--terracota);
+      margin-right: 4px;
+      white-space: nowrap;
+      border: 1px solid rgba(184, 122, 99, 0.2);
+    }
+
+    /* Luxury Toast Notification */
+    .toast-notification {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(120px);
+      background: rgba(28, 11, 3, 0.95);
+      color: #FAF5F0;
+      padding: 14px 20px;
+      border-radius: 14px;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
+      font-size: 13px;
+      line-height: 1.5;
+      text-align: center;
+      max-width: 90%;
+      width: 380px;
+      z-index: 9999;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      border: 1px solid rgba(197, 160, 89, 0.45);
+      backdrop-filter: blur(12px);
+    }
+
+    .toast-notification.active {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .toast-notification a {
+      color: var(--gold);
+      font-weight: 700;
+      text-decoration: underline;
+      margin-left: 4px;
+      display: inline-block;
+      margin-top: 4px;
+    }
   </style>
+  <!-- Google Analytics 4 (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-STAYSTYLE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-STAYSTYLE', {
+      send_page_view: true,
+      page_title: 'Stay Style • Link na Bio Oficial',
+      page_location: window.location.href
+    });
+  </script>
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+
+    var PIXEL_ID = 'PIXEL_STAY_STYLE_ID'; // Placeholder pronto para receber o ID oficial dia 20/09
+    if(/^\d{6,}$/.test(PIXEL_ID)){
+      fbq('init', PIXEL_ID);
+      fbq('track', 'PageView');
+    }
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+         src="https://www.facebook.com/tr?id=PIXEL_STAY_STYLE_ID&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- End Meta Pixel Code -->
+
 </head>
 <body>
   <main>
@@ -445,15 +597,18 @@
     <nav class="links" aria-label="Links oficiais da Stay Style">
       
       <!-- 1. Loja Nuvemshop (Destaque Principal com Ícone de Bolsa de Luxo) -->
-      <a class="btn primary reveal" id="btn-loja" href="https://staystyle.com.br" target="_blank" rel="noopener" data-track="LojaNuvemshop">
+      <a class="btn coming-soon reveal" id="btn-loja" href="#em-breve" data-track="LojaNuvemshop" aria-disabled="true">
         <div class="btn-icon">
           <img src="data:image/jpeg;base64,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" alt="Loja Nuvemshop" class="btn-img-icon">
         </div>
         <div class="btn-content">
-          <span class="btn-title">Comprar na Loja Oficial (Nuvemshop)</span>
-          <span class="btn-desc">Catálogo completo · Até 6x sem juros no cartão</span>
+          <div class="btn-title-row">
+            <span class="btn-title">Comprar na Loja Oficial Online</span>
+            <span class="badge-em-breve"><span class="dot-amber"></span> Em Breve</span>
+          </div>
+          <span class="btn-desc">E-commerce em preparação · Atendimento & pedidos no WhatsApp</span>
         </div>
-        <span class="btn-arrow">→</span>
+        <span class="btn-lock">🔒</span>
       </a>
 
       <!-- 2. Grupo VIP WhatsApp (Com Ícone de Coroa de Ouro Luxury) -->
@@ -509,7 +664,7 @@
       </a>
 
       <!-- 5. Coleção Cápsula & Linho Puro -->
-      <a class="btn reveal" href="https://staystyle.com.br" target="_blank" rel="noopener" data-track="ColecaoLinho">
+      <a class="btn reveal" href="https://api.whatsapp.com/send?phone=5511968375920&text=Ol%C3%A1!%20Vim%20pelo%20link%20da%20bio%20e%20gostaria%20de%20ver%20o%20cat%C3%A1logo%20da%20Cole%C3%A7%C3%A3o%20C%C3%A1psula%20em%20Linho." target="_blank" rel="noopener" data-track="ColecaoLinhoWhatsApp">
         <div class="btn-icon">
           <svg width="46" height="46" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
   <rect width="48" height="48" rx="14" fill="url(#tailorGrad)" stroke="#E5DDD5"/>
@@ -587,38 +742,114 @@
       <div class="brand-sign">Stay Style • Todos os direitos reservados</div>
       <a href="https://bio.jpstudio.tech" target="_blank" rel="noopener">tecnologia & performance por JPStudio</a>
     </footer>
+
+    <!-- Toast Informativo Luxury -->
+    <div id="toastComingSoon" class="toast-notification" role="status" aria-live="polite">
+      <span>✨ <strong>E-commerce Stay Style em Breve!</strong><br>Estamos preparando nossa loja online com muito carinho.<br>Faça seu pedido e tire dúvidas direto com nossa equipe:<br><a href="https://api.whatsapp.com/send?phone=5511968375920&text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20pedido%20pelo%20WhatsApp." target="_blank">Conversar no WhatsApp Oficial ↗</a></span>
+    </div>
+
   </main>
 
-  <!-- Script de Rastreamento de Cliques (Meta Pixel Ready) -->
+  <!-- Script de Rastreamento Unificado: Meta Pixel + GA4 -->
   <script>
     (function(){
-      var PIXEL_ID = 'SEU_PIXEL_ID';
-      if(/^\d{6,}$/.test(PIXEL_ID)){
-        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', PIXEL_ID);
-        fbq('track', 'PageView');
+      var PIXEL_ID = 'PIXEL_STAY_STYLE_ID'; // Placeholder pronto para receber o ID oficial dia 20/09
+      var GA_ID = 'G-STAYSTYLE';
+
+      // 1. Toast de Notificação Informativa
+      var toastTimeout;
+      function showToast(){
+        var toast = document.getElementById('toastComingSoon');
+        if(!toast) return;
+        toast.classList.add('active');
+        clearTimeout(toastTimeout);
+        toastTimeout = setTimeout(function(){
+          toast.classList.remove('active');
+        }, 5000);
       }
-      document.querySelectorAll('[data-track]').forEach(function(el){
-        el.addEventListener('click', function(){
-          if(window.fbq) fbq('trackCustom', 'LinkClick', { link: el.dataset.track });
+
+      // 2. Interceptador de Botões com Status 'Em Breve' (Desativa clique e dispara eventos)
+      document.querySelectorAll('.coming-soon').forEach(function(el){
+        el.addEventListener('click', function(e){
+          e.preventDefault();
+          var trackName = el.dataset.track || 'LojaNuvemshop';
+
+          // Dispara evento no GA4
+          if(window.gtag){
+            gtag('event', 'click_coming_soon', {
+              'item_name': trackName,
+              'event_category': 'Engagement',
+              'event_label': 'Botão Loja Em Breve'
+            });
+          }
+
+          // Dispara evento customizado no Meta Pixel
+          if(window.fbq && /^\d{6,}$/.test(PIXEL_ID)){
+            fbq('trackCustom', 'ClickEmBreve', {
+              item: trackName,
+              status: 'em_breve'
+            });
+          }
+
+          // Feedback tátil visual e Toast
+          el.style.transform = 'scale(0.97)';
+          setTimeout(function(){ el.style.transform = 'none'; }, 160);
+          showToast();
+          return false;
         });
       });
+
+      // 3. Rastreamento Geral de Cliques em Links Ativos
+      document.querySelectorAll('[data-track]:not(.coming-soon)').forEach(function(el){
+        el.addEventListener('click', function(){
+          var trackName = el.dataset.track;
+          if(window.gtag){
+            gtag('event', 'click_linkinbio', {
+              'link_name': trackName,
+              'event_category': 'Navigation'
+            });
+          }
+          if(window.fbq && /^\d{6,}$/.test(PIXEL_ID)){
+            fbq('trackCustom', 'LinkClick', { link: trackName });
+          }
+        });
+      });
+
+      // 4. Conversão Principal: Atendimento no WhatsApp (Lead / Contact)
       var waBtn = document.getElementById('btn-wa');
       if(waBtn){
         waBtn.addEventListener('click', function(){
-          if(window.fbq) fbq('track', 'Contact', { content_name: 'WhatsApp Atendimento' });
+          if(window.gtag){
+            gtag('event', 'generate_lead', {
+              'event_category': 'Conversion',
+              'event_label': 'WhatsApp Atendimento',
+              'value': 1.0
+            });
+          }
+          if(window.fbq && /^\d{6,}$/.test(PIXEL_ID)){
+            fbq('track', 'Contact', {
+              content_name: 'WhatsApp Atendimento',
+              content_category: 'Lead WhatsApp'
+            });
+          }
         });
       }
+
+      // 5. Conversão Secundária: Grupo VIP WhatsApp
       var vipBtn = document.getElementById('btn-vip');
       if(vipBtn){
         vipBtn.addEventListener('click', function(){
-          if(window.fbq) fbq('trackCustom', 'GrupoVIP', { content_name: 'Grupo VIP WhatsApp' });
-        });
-      }
-      var lojaBtn = document.getElementById('btn-loja');
-      if(lojaBtn){
-        lojaBtn.addEventListener('click', function(){
-          if(window.fbq) fbq('track', 'InitiateCheckout', { content_name: 'Loja Nuvemshop' });
+          if(window.gtag){
+            gtag('event', 'join_group', {
+              'event_category': 'Conversion',
+              'event_label': 'Grupo VIP WhatsApp'
+            });
+          }
+          if(window.fbq && /^\d{6,}$/.test(PIXEL_ID)){
+            fbq('trackCustom', 'GrupoVIP', {
+              content_name: 'Grupo VIP WhatsApp'
+            });
+          }
         });
       }
     })();
