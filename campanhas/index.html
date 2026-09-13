@@ -3,45 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stay Style • Fluxograma de Tráfego Meta Ads (Estrutura Oficial)</title>
+  <title>Stay Style • Estrutura Oficial de Campanhas Meta Ads</title>
 
   <!-- Google Fonts: Playfair Display + Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg-light: #F7F4F0;
-      --text-dark: #140A04;
-      --text-body: #4A3E39;
-      --text-muted: #7E7069;
-      --border: #E5DCD3;
+      --bg-cream: #F8F5F1;
+      --bg-card: #FFFFFF;
+      --text-main: #1C130E;
+      --text-body: #4A3E38;
+      --text-muted: #82756E;
+      --border: #E8DFD5;
       
-      /* Cores Oficiais Meta & Ferramentas */
+      /* Tons Oficiais Stay Style & Meta */
       --meta-blue: #0081FB;
-      --meta-dark: #0064D1;
-      --meta-navy: #0F1E36;
-      --ig-gradient: linear-gradient(45deg, #F58529 0%, #DD2A7B 50%, #8134AF 100%);
-      --wa-green: #25D366;
-      --wa-dark: #128C7E;
-      --nuvem-blue: #2D3192;
-      --nuvem-cyan: #00A3E0;
-
-      /* Cores das Campanhas */
-      --c1-primary: #D94819;
-      --c1-bg: #FFF9F6;
-      --c1-border: #FCD6C9;
-
-      --c2-primary: #047857;
-      --c2-bg: #F4FBF7;
-      --c2-border: #C6F0DF;
-
-      --c3-primary: #6D28D9;
-      --c3-bg: #F9F6FF;
-      --c3-border: #E2D5FC;
-
-      --gold: #B88E3E;
+      --gold: #C5A059;
+      --terracota: #B87A63;
+      --c1-color: #D94819;
+      --c2-color: #047857;
+      --c3-color: #6D28D9;
+      
+      --shadow-soft: 0 10px 30px rgba(28, 19, 14, 0.04);
+      --shadow-hover: 0 18px 40px rgba(28, 19, 14, 0.09);
     }
 
     * {
@@ -52,15 +39,15 @@
 
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
-      background-color: var(--bg-light);
+      background-color: var(--bg-cream);
       background-image: 
-        radial-gradient(at 10% 15%, rgba(0, 129, 251, 0.05) 0px, transparent 40%),
-        radial-gradient(at 90% 25%, rgba(217, 72, 25, 0.05) 0px, transparent 40%),
-        radial-gradient(at 50% 85%, rgba(16, 185, 129, 0.05) 0px, transparent 45%);
-      color: var(--text-dark);
+        radial-gradient(at 15% 15%, rgba(197, 160, 89, 0.07) 0px, transparent 45%),
+        radial-gradient(at 85% 25%, rgba(217, 72, 25, 0.05) 0px, transparent 40%),
+        radial-gradient(at 50% 80%, rgba(4, 120, 87, 0.05) 0px, transparent 50%);
+      color: var(--text-main);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
-      padding-bottom: 90px;
+      padding-bottom: 80px;
     }
 
     h1, h2, h3, h4, .serif {
@@ -69,22 +56,21 @@
     }
 
     .container {
-      max-width: 1280px;
+      max-width: 1240px;
       margin: 0 auto;
-      padding: 0 24px;
+      padding: 0 22px;
     }
 
-    /* Top Bar */
+    /* Top Bar Minimalista */
     .top-bar {
-      background: #0F172A;
+      background: #111827;
       color: #FFFFFF;
-      padding: 12px 24px;
+      padding: 11px 24px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      font-size: 13px;
+      font-size: 12.5px;
       font-weight: 500;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
     }
 
     .top-brand-indicator {
@@ -93,31 +79,18 @@
       gap: 8px;
     }
 
-    .btn-pdf {
-      background: linear-gradient(135deg, #0081FB 0%, #0056B3 100%);
-      color: #FFFFFF;
-      border: none;
-      padding: 7px 18px;
-      border-radius: 20px;
-      cursor: pointer;
-      font-size: 12.5px;
-      font-weight: 700;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      transition: all 0.2s ease;
-      box-shadow: 0 4px 12px rgba(0, 129, 251, 0.35);
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      background: #10B981;
+      border-radius: 50%;
+      box-shadow: 0 0 8px #10B981;
     }
 
-    .btn-pdf:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 6px 16px rgba(0, 129, 251, 0.5);
-    }
-
-    /* Header Nav com a LOGO REAL */
+    /* Header com Logo Oficial da Stay Style */
     header {
-      padding: 18px 0;
-      background: rgba(247, 244, 240, 0.94);
+      padding: 20px 0;
+      background: rgba(248, 245, 241, 0.94);
       backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--border);
       position: sticky;
@@ -129,2979 +102,941 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;
       gap: 16px;
     }
 
-    .logo-real-wrap {
+    .brand-group {
       display: flex;
       align-items: center;
       gap: 16px;
     }
 
-    .stay-style-logo-img {
-      width: 52px;
-      height: 52px;
+    .stay-logo-img {
+      width: 50px;
+      height: 50px;
       border-radius: 12px;
       object-fit: cover;
-      border: 1.5px solid var(--border);
-      box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
     }
 
-    .brand-titles-group {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .brand-title-main {
-      font-size: 24px;
+    .brand-title {
+      font-size: 22px;
       font-weight: 700;
-      letter-spacing: 1.5px;
+      letter-spacing: 1.2px;
       text-transform: uppercase;
       line-height: 1.1;
     }
 
-    .brand-subtitle-tag {
+    .brand-sub {
       font-size: 11.5px;
       color: var(--text-muted);
-      font-weight: 600;
-      letter-spacing: 0.5px;
+      font-weight: 500;
     }
 
-    .status-badge-header {
+    .status-badge {
       background: #FFFFFF;
-      border: 1px solid rgba(16, 185, 129, 0.35);
-      padding: 7px 18px;
-      border-radius: 30px;
-      font-size: 13px;
+      border: 1px solid rgba(4, 120, 87, 0.3);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 12px;
       font-weight: 700;
       color: #047857;
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      box-shadow: 0 4px 15px rgba(16, 185, 129, 0.08);
+      gap: 7px;
     }
 
-    .status-dot-pulse {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #10B981;
-      animation: pulse-dot 2s infinite;
-    }
-
-    @keyframes pulse-dot {
-      0% { transform: scale(0.9); opacity: 1; }
-      50% { transform: scale(1.3); opacity: 0.4; }
-      100% { transform: scale(0.9); opacity: 1; }
-    }
-
-    /* Hero Section */
+    /* Hero Section Executivo Curto */
     .hero-wrap {
-      padding: 46px 0 32px;
       text-align: center;
+      padding: 42px 0 28px 0;
+      max-width: 820px;
+      margin: 0 auto;
     }
 
-    .meta-partner-tag {
+    .hero-tag {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
       background: #FFFFFF;
-      border: 1px solid rgba(0, 129, 251, 0.3);
-      padding: 6px 18px;
-      border-radius: 30px;
-      font-size: 12px;
+      border: 1px solid var(--border);
+      padding: 5px 14px;
+      border-radius: 20px;
+      font-size: 11.5px;
+      font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 1.5px;
-      color: var(--meta-dark);
-      font-weight: 800;
+      letter-spacing: 0.8px;
+      color: var(--terracota);
       margin-bottom: 14px;
-      box-shadow: 0 4px 14px rgba(0, 129, 251, 0.08);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
     }
 
     .hero-wrap h1 {
-      font-size: clamp(30px, 3.8vw, 48px);
-      line-height: 1.18;
-      margin-bottom: 16px;
+      font-size: 38px;
       font-weight: 700;
+      line-height: 1.2;
+      color: var(--text-main);
+      margin-bottom: 14px;
     }
 
     .hero-wrap h1 span {
+      color: var(--c1-color);
       font-style: italic;
-      color: #D94819;
     }
 
     .hero-wrap p {
-      font-size: 16.5px;
+      font-size: 15px;
       color: var(--text-body);
-      max-width: 760px;
-      margin: 0 auto 28px;
+      line-height: 1.6;
     }
 
-    /* 4 Bar Metrics */
-    .metrics-bar-grid {
+    /* Deck de 4 Métricas Chave */
+    .metrics-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 16px;
-      margin-top: 20px;
+      margin: 32px 0 45px 0;
     }
 
     @media (max-width: 860px) {
-      .metrics-bar-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
+      .metrics-grid { grid-template-columns: repeat(2, 1fr); }
+      .hero-wrap h1 { font-size: 28px; }
     }
 
-    .metric-pill-card {
+    .metric-card {
       background: #FFFFFF;
       border: 1px solid var(--border);
       border-radius: 16px;
-      padding: 16px 18px;
-      text-align: left;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.03);
+      padding: 18px 20px;
+      text-align: center;
+      box-shadow: var(--shadow-soft);
+      transition: transform 0.25s ease;
     }
 
-    .metric-top-label {
+    .metric-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .metric-label {
       font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: var(--text-muted);
       font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: var(--text-muted);
       margin-bottom: 4px;
     }
 
-    .metric-main-value {
+    .metric-val {
       font-size: 24px;
       font-weight: 800;
-      color: var(--text-dark);
-      font-family: 'Playfair Display', serif;
+      color: var(--text-main);
+      font-family: 'Playfair Display', Georgia, serif;
     }
 
-    .metric-sub-detail {
-      font-size: 12px;
+    .metric-sub {
+      font-size: 11.5px;
+      color: var(--c2-color);
       font-weight: 600;
-      color: #047857;
       margin-top: 2px;
     }
 
-    /* ======================================================== */
-    /* FLUXOGRAMA HIERÁRQUICO COM ÍCONES OFICIAIS META ADS */
-    /* ======================================================== */
-    .flowchart-engine {
-      margin-top: 40px;
+    /* FLUXOGRAMA CENTRAL */
+    .flowchart-wrap {
+      margin-top: 10px;
     }
 
-    /* NÍVEL 0: ROOT META ADS CARD */
-    .meta-root-box {
-      max-width: 860px;
-      margin: 0 auto 36px;
-      background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
-      border: 1.5px solid rgba(255,255,255,0.14);
-      border-radius: 24px;
-      padding: 30px;
+    /* Central de Comando Meta Ads */
+    .meta-central-card {
+      background: #FFFFFF;
+      border: 1.5px solid #D5E7FC;
+      border-radius: 22px;
+      padding: 26px 32px;
       text-align: center;
-      color: #FFFFFF;
-      box-shadow: 0 20px 45px rgba(15, 23, 42, 0.25);
+      max-width: 680px;
+      margin: 0 auto;
+      box-shadow: 0 12px 36px rgba(0, 129, 251, 0.07);
       position: relative;
     }
 
-    .meta-logo-header {
+    .meta-central-tag {
       display: inline-flex;
       align-items: center;
-      gap: 12px;
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.18);
-      padding: 8px 22px;
-      border-radius: 30px;
-      margin-bottom: 16px;
-    }
-
-    .meta-logo-header span {
-      font-size: 14px;
+      gap: 8px;
+      background: #F0F7FF;
+      color: var(--meta-blue);
+      padding: 5px 14px;
+      border-radius: 20px;
+      font-size: 11.5px;
       font-weight: 700;
-      letter-spacing: 1px;
-      color: #38BDF8;
       text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
     }
 
-    .meta-root-title {
-      font-size: 28px;
-      font-weight: 700;
-      color: #FFFFFF;
-      margin-bottom: 6px;
-    }
-
-    .meta-root-sub {
-      font-size: 14px;
-      color: #94A3B8;
-      margin-bottom: 16px;
+    .meta-central-title {
+      font-size: 22px;
+      color: var(--text-main);
+      margin-bottom: 4px;
     }
 
     .meta-budget-pill {
       display: inline-flex;
       align-items: center;
-      gap: 14px;
-      background: rgba(0, 129, 251, 0.18);
-      border: 1px solid rgba(0, 129, 251, 0.4);
-      padding: 8px 24px;
-      border-radius: 30px;
-      font-size: 15px;
-      font-weight: 800;
-      color: #60A5FA;
-      margin-bottom: 14px;
+      gap: 8px;
+      background: #111827;
+      color: #FFFFFF;
+      padding: 6px 18px;
+      border-radius: 20px;
+      font-size: 12.5px;
+      font-weight: 700;
+      margin: 10px 0 12px 0;
     }
 
-    .meta-root-desc {
-      font-size: 14px;
-      color: #CBD5E1;
-      max-width: 680px;
-      margin: 0 auto;
-      line-height: 1.6;
+    .meta-central-desc {
+      font-size: 13.5px;
+      color: var(--text-body);
+      line-height: 1.55;
     }
 
-    /* Conector Principal Tronco */
-    .trunk-connector {
+    /* Conector Tronco Animado */
+    .flow-trunk {
       width: 3px;
-      height: 36px;
-      background: #0F172A;
+      height: 38px;
+      background: linear-gradient(180deg, #0081FB 0%, #111827 100%);
       margin: 0 auto;
       position: relative;
     }
 
-    .trunk-connector::after {
+    .flow-trunk::after {
       content: '';
       position: absolute;
       bottom: 0;
       left: 50%;
       transform: translateX(-50%);
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
+      width: 9px;
+      height: 9px;
       background: #0081FB;
+      border-radius: 50%;
       box-shadow: 0 0 10px #0081FB;
     }
 
-    /* 3 COLUNAS DO FLUXOGRAMA */
-    .flow-columns-grid {
+    /* GRID DAS 3 COLUNAS ESTRATÉGICAS */
+    .columns-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 24px;
-      margin-top: 8px;
+      margin-top: 12px;
     }
 
-    @media (max-width: 1100px) {
-      .flow-columns-grid {
-        grid-template-columns: 1fr;
-        gap: 45px;
-      }
+    @media (max-width: 1024px) {
+      .columns-grid { grid-template-columns: 1fr; gap: 40px; }
     }
 
-    .flow-column {
+    .col-stack {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      gap: 14px;
+      gap: 16px;
     }
 
-    /* Conectores com Seta para Baixo */
-    .arrow-line-down {
-      width: 2.5px;
-      height: 24px;
+    .arrow-down {
+      width: 2px;
+      height: 20px;
+      margin: 0 auto;
       position: relative;
     }
 
-    .arrow-line-down.c1 { background: #D94819; }
-    .arrow-line-down.c2 { background: #047857; }
-    .arrow-line-down.c3 { background: #6D28D9; }
+    .arrow-down.c1 { background: var(--c1-color); }
+    .arrow-down.c2 { background: var(--c2-color); }
+    .arrow-down.c3 { background: var(--c3-color); }
 
-    .arrow-line-down::after {
+    .arrow-down::after {
       content: '';
       position: absolute;
-      bottom: -6px;
+      bottom: -4px;
       left: 50%;
       transform: translateX(-50%);
       width: 0;
       height: 0;
-      border-left: 5px solid transparent;
-      border-right: 5px solid transparent;
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
     }
 
-    .arrow-line-down.c1::after { border-top: 7px solid #D94819; }
-    .arrow-line-down.c2::after { border-top: 7px solid #047857; }
-    .arrow-line-down.c3::after { border-top: 7px solid #6D28D9; }
+    .arrow-down.c1::after { border-top: 6px solid var(--c1-color); }
+    .arrow-down.c2::after { border-top: 6px solid var(--c2-color); }
+    .arrow-down.c3::after { border-top: 6px solid var(--c3-color); }
 
-    /* CARD DE NÍVEL */
-    .stage-card {
-      width: 100%;
+    /* CARD DE ETAPA DO FLUXOGRAMA */
+    .flow-card {
       background: #FFFFFF;
       border-radius: 20px;
       padding: 22px;
       border: 1px solid var(--border);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.03);
+      box-shadow: var(--shadow-soft);
       position: relative;
-      transition: all 0.25s ease;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    .stage-card:hover {
+    .flow-card:hover {
       transform: translateY(-3px);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+      box-shadow: var(--shadow-hover);
     }
 
-    /* Cores de Tema por Coluna */
-    .card-c1 {
-      background: var(--c1-bg);
-      border-color: var(--c1-border);
-    }
-    .card-c1 .color-strip { background: linear-gradient(90deg, #D94819, #FF6F43); }
-
-    .card-c2 {
-      background: var(--c2-bg);
-      border-color: var(--c2-border);
-    }
-    .card-c2 .color-strip { background: linear-gradient(90deg, #047857, #10B981); }
-
-    .card-c3 {
-      background: var(--c3-bg);
-      border-color: var(--c3-border);
-    }
-    .card-c3 .color-strip { background: linear-gradient(90deg, #6D28D9, #8B5CF6); }
-
-    .color-strip {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 5px;
-      border-radius: 20px 20px 0 0;
-    }
-
-    /* Cabeçalho do Card */
-    .stage-card-header {
+    .card-top-row {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 12px;
-      padding-top: 2px;
     }
 
-    .stage-tag {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 1.2px;
-      font-weight: 800;
-      padding: 4px 10px;
-      border-radius: 8px;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .tag-style-c1 { background: #FFE8DF; color: #D94819; }
-    .tag-style-c2 { background: #D1FAE5; color: #047857; }
-    .tag-style-c3 { background: #EDE9FE; color: #6D28D9; }
-
-    .stage-budget-badge {
-      font-size: 12.5px;
-      font-weight: 800;
-      padding: 4px 12px;
-      border-radius: 20px;
-      background: #FFFFFF;
-      border: 1px solid var(--border);
-      color: var(--text-dark);
-    }
-
-    /* Linha do Título com Ícone Oficial */
-    .stage-title-row {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 12px;
-    }
-
-    .official-icon-box {
-      width: 42px;
-      height: 42px;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      background: #FFFFFF;
-      border: 1px solid var(--border);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.04);
-    }
-
-    .stage-title-text {
-      font-size: 18px;
-      font-weight: 700;
-      color: var(--text-dark);
-      line-height: 1.25;
-    }
-
-    /* Lista Técnica de Especificações (SEM EMOJIS - USANDO SVGs) */
-    .tech-specs-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      margin-bottom: 16px;
-      font-size: 13.5px;
-      color: var(--text-body);
-      border-bottom: 1px dashed rgba(200, 190, 180, 0.7);
-      padding-bottom: 14px;
-    }
-
-    .tech-specs-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      line-height: 1.45;
-    }
-
-    .tech-specs-list strong {
-      color: var(--text-dark);
-    }
-
-    .tech-ico {
-      width: 17px;
-      height: 17px;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-
-    /* BOX DE TEXTO EXPLICATIVO EMBAIXO DO QUADRADO */
-    .stage-explanation-box {
-      border-radius: 12px;
-      padding: 12px 14px;
-      font-size: 13px;
-      line-height: 1.5;
-    }
-
-    .exp-c1 {
-      background: #FFF2EC;
-      border-left: 4px solid #D94819;
-      color: #5A2312;
-    }
-
-    .exp-c2 {
-      background: #E8F8F0;
-      border-left: 4px solid #047857;
-      color: #0E4733;
-    }
-
-    .exp-c3 {
-      background: #F3EFFF;
-      border-left: 4px solid #6D28D9;
-      color: #381577;
-    }
-
-    .exp-wa {
-      background: #EAF9EE;
-      border-left: 4px solid #10B981;
-      color: #0B5238;
-    }
-
-    .exp-shop {
-      background: #EEF0FA;
-      border-left: 4px solid #2D3192;
-      color: #171A57;
-    }
-
-    .exp-header {
-      font-size: 11px;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-      margin-bottom: 4px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    /* GRID SPLIT DE 2 CRIATIVOS */
-    .creatives-row-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      width: 100%;
-    }
-
-    @media (max-width: 600px) {
-      .creatives-row-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .creative-box-item {
-      background: #FFFFFF;
-      border-radius: 16px;
-      padding: 16px;
-      border: 1px solid var(--border);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .creative-box-item:hover {
-      border-color: #0081FB;
-      box-shadow: 0 6px 18px rgba(0, 129, 251, 0.12);
-    }
-
-    .c-badge-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 8px;
-    }
-
-    .c-format-tag {
+    .step-tag {
       font-size: 10.5px;
       font-weight: 800;
       text-transform: uppercase;
-      letter-spacing: 0.8px;
-      background: #F1F5F9;
-      color: #334155;
-      padding: 2px 8px;
-      border-radius: 6px;
-    }
-
-    .c-time-tag {
-      font-size: 11px;
-      font-weight: 700;
-      color: var(--text-muted);
-    }
-
-    .c-heading {
-      font-size: 14px;
-      font-weight: 700;
-      color: var(--text-dark);
-      margin-bottom: 6px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .c-hook-quote {
-      font-size: 12px;
-      font-style: italic;
-      color: #334155;
-      background: #F8FAFC;
-      padding: 6px 10px;
-      border-radius: 8px;
-      margin-bottom: 10px;
-      border-left: 2px solid #0081FB;
-      line-height: 1.4;
-    }
-
-    .c-desc-text {
-      font-size: 11.5px;
-      color: var(--text-muted);
-      line-height: 1.4;
-    }
-
-    /* CARD DE DESTINO FINAL */
-    .destination-stage-card {
-      border-radius: 20px;
-      padding: 22px;
-      box-shadow: 0 10px 28px rgba(0,0,0,0.05);
-    }
-
-    /* DECK FINAL DE INDICADORES */
-    .summary-metrics-deck {
-      margin-top: 50px;
-      background: #FFFFFF;
-      border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: 30px 26px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.03);
-    }
-
-    .deck-metrics-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-      text-align: center;
-    }
-
-    @media (max-width: 820px) {
-      .deck-metrics-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    .deck-num {
-      font-size: 32px;
-      font-weight: 800;
-      font-family: 'Playfair Display', serif;
-      color: var(--text-dark);
-      margin-bottom: 2px;
-    }
-
-    .deck-desc {
-      font-size: 12px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: var(--text-muted);
-    }
-
-    /* Action CTA Box */
-    .bottom-cta-panel {
-      margin-top: 40px;
-      background: #0F172A;
-      border-radius: 24px;
-      padding: 40px 28px;
-      text-align: center;
-      color: #FFFFFF;
-      box-shadow: 0 20px 45px rgba(15, 23, 42, 0.25);
-    }
-
-    .bottom-cta-panel h2 {
-      font-size: 32px;
-      margin-bottom: 12px;
-      color: #FFFFFF;
-    }
-
-    .bottom-cta-panel p {
-      font-size: 16px;
-      color: #94A3B8;
-      max-width: 620px;
-      margin: 0 auto 26px;
-    }
-
-    .btn-action-whatsapp {
+      letter-spacing: 0.6px;
+      padding: 3px 10px;
+      border-radius: 12px;
       display: inline-flex;
       align-items: center;
-      gap: 12px;
-      background: #25D366;
-      color: #FFFFFF;
-      text-decoration: none;
-      padding: 15px 34px;
-      border-radius: 40px;
-      font-size: 16px;
-      font-weight: 800;
-      box-shadow: 0 10px 25px rgba(37, 211, 102, 0.35);
+      gap: 5px;
+    }
+
+    .tag-c1 { background: #FFF0EB; color: var(--c1-color); border: 1px solid #FCD6C9; }
+    .tag-c2 { background: #ECFDF5; color: var(--c2-color); border: 1px solid #A7F3D0; }
+    .tag-c3 { background: #F5F3FF; color: var(--c3-color); border: 1px solid #DDD6FE; }
+
+    .budget-tag {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-main);
+      background: #F3ECE4;
+      padding: 3px 9px;
+      border-radius: 12px;
+    }
+
+    .card-title {
+      font-size: 18px;
+      color: var(--text-main);
+      margin-bottom: 8px;
+    }
+
+    .card-specs {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      font-size: 12.5px;
+      color: var(--text-body);
+      margin-bottom: 14px;
+    }
+
+    .card-specs li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      line-height: 1.45;
+    }
+
+    .card-specs li strong {
+      color: var(--text-main);
+    }
+
+    .rationale-box {
+      background: #FAF7F4;
+      border-left: 3px solid;
+      border-radius: 0 10px 10px 0;
+      padding: 10px 12px;
+      font-size: 11.5px;
+      line-height: 1.5;
+      color: var(--text-body);
+    }
+
+    .rationale-box.c1 { border-color: var(--c1-color); }
+    .rationale-box.c2 { border-color: var(--c2-color); }
+    .rationale-box.c3 { border-color: var(--c3-color); }
+
+    /* CARDS FOTORREALISTAS DE CRIATIVOS (REELS 9:16) */
+    .creative-visual-card {
+      background: #FFFFFF;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
       transition: all 0.25s ease;
     }
 
-    .btn-action-whatsapp:hover {
-      background: #20BA5A;
-      transform: translateY(-2px);
-      box-shadow: 0 14px 30px rgba(37, 211, 102, 0.5);
+    .creative-visual-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
     }
 
-    @media print {
-      body { background: #fff !important; padding-bottom: 0; }
-      header, .top-bar, .btn-pdf, .bottom-cta-panel { display: none !important; }
-      .stage-card, .meta-root-box { box-shadow: none !important; border: 1px solid #888 !important; }
-    }
-  
-    /* =========================================================
-       EFEITOS WOW: 3D TILT, MOTION DESIGN & ILUMINAÇÃO DINÂMICA
-       ========================================================= */
-
-    /* Perspectiva para Efeito 3D */
-    .flow-columns-grid, .meta-root-box, .metrics-bar-grid {
-      perspective: 1200px;
-    }
-
-    .stage-card {
-      transform-style: preserve-3d;
-      transition: transform 0.15s ease-out, box-shadow 0.25s ease, border-color 0.25s ease, opacity 0.3s ease;
-      will-change: transform;
+    .creative-img-wrap {
       position: relative;
-      overflow: visible !important;
-    }
-
-    /* Brilho Glare 3D Dinâmico */
-    .card-glare {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      border-radius: 20px;
-      pointer-events: none;
-      background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0) 70%);
-      opacity: 0;
-      transition: opacity 0.2s ease;
-      z-index: 10;
-    }
-
-    /* Camadas com Profundidade 3D (Z-Index Espacial) */
-    .stage-card-header, .stage-title-row, .stage-budget-badge, .badge-destaque, .btn-ver-roteiro {
-      transform: translateZ(24px);
-    }
-    .tech-specs-list, .explanation-box {
-      transform: translateZ(12px);
-    }
-
-    /* Conectores com Fluxo de Energia Animado */
-    .trunk-connector {
-      width: 4px;
-      height: 42px;
-      background: linear-gradient(180deg, #0081FB 0%, #0F172A 100%);
-      margin: 0 auto;
-      position: relative;
-      overflow: hidden;
-      border-radius: 4px;
-    }
-
-    .trunk-connector::before {
-      content: '';
-      position: absolute;
-      top: -40px;
-      left: 0;
       width: 100%;
-      height: 35px;
-      background: linear-gradient(180deg, transparent, #60A5FA, #FFFFFF);
-      animation: flowPulseTrunk 1.8s infinite ease-in-out;
-    }
-
-    @keyframes flowPulseTrunk {
-      0% { top: -40px; }
-      100% { top: 100%; }
-    }
-
-    .arrow-line-down {
-      width: 3px;
-      height: 28px;
-      position: relative;
-      margin: 0 auto;
-      border-radius: 3px;
+      height: 230px;
       overflow: hidden;
     }
 
-    .arrow-line-down::before {
-      content: '';
-      position: absolute;
-      top: -30px;
-      left: 0;
-      width: 100%;
-      height: 24px;
-      background: linear-gradient(180deg, transparent, #FFFFFF);
-      opacity: 0.9;
-      animation: flowStream 1.6s infinite ease-in-out;
-    }
-
-    .arrow-line-down.c1::before { animation-delay: 0.1s; }
-    .arrow-line-down.c2::before { animation-delay: 0.35s; }
-    .arrow-line-down.c3::before { animation-delay: 0.6s; }
-
-    @keyframes flowStream {
-      0% { top: -30px; }
-      100% { top: 100%; }
-    }
-
-    /* Radar Sonar de Geolocalização Regional (Campanha 1) */
-    .radar-container {
-      position: absolute;
-      top: 16px;
-      right: 18px;
-      width: 28px;
-      height: 28px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      pointer-events: none;
-      transform: translateZ(30px);
-    }
-
-    .radar-dot {
-      width: 8px;
-      height: 8px;
-      background: #D94819;
-      border-radius: 50%;
-      box-shadow: 0 0 8px #D94819;
-      position: relative;
-      z-index: 2;
-    }
-
-    .radar-wave {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      border: 1.5px solid #D94819;
-      border-radius: 50%;
-      opacity: 0.8;
-      animation: sonarPing 2s cubic-bezier(0, 0.2, 0.8, 1) infinite;
-    }
-
-    .radar-wave:nth-child(2) {
-      animation-delay: 0.7s;
-    }
-
-    @keyframes sonarPing {
-      0% { transform: scale(0.3); opacity: 1; }
-      100% { transform: scale(1.8); opacity: 0; }
-    }
-
-    /* Shimmer Dourado Luxury (Campanha 2 - VIP) */
-    .card-c2 {
-      position: relative;
-    }
-    .shimmer-luxury-wrap {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      border-radius: 20px;
-      pointer-events: none;
-      overflow: hidden;
-      z-index: 1;
-    }
-    .shimmer-luxury-wrap::after {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -60%;
-      width: 50%;
-      height: 200%;
-      background: linear-gradient(
-        60deg,
-        rgba(255,255,255,0) 20%,
-        rgba(255, 235, 179, 0.28) 50%,
-        rgba(255,255,255,0) 80%
-      );
-      transform: rotate(25deg);
-      animation: goldShine 4.5s infinite ease-in-out;
-    }
-
-    @keyframes goldShine {
-      0%, 20% { left: -60%; }
-      50%, 100% { left: 140%; }
-    }
-
-    /* Magnet Pulse (Campanha 3 - Remarketing) */
-    .magnet-pulse-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      font-size: 11px;
-      font-weight: 700;
-      color: #6D28D9;
-      background: #F3EBFF;
-      padding: 3px 9px;
-      border-radius: 14px;
-      border: 1px solid #D8B4FE;
-      animation: magnetFloat 2.5s infinite ease-in-out;
-    }
-
-    @keyframes magnetFloat {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-3px); }
-    }
-
-    /* Badge Interativo de Roteiro de Provador (Reels) */
-    .btn-ver-roteiro {
-      margin-top: 12px;
-      width: 100%;
-      background: #FFFFFF;
-      border: 1.5px solid var(--c1-border);
-      color: var(--c1-primary);
-      padding: 9px 14px;
-      border-radius: 12px;
-      font-size: 12px;
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      cursor: pointer;
-      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-      box-shadow: 0 2px 6px rgba(217, 72, 25, 0.08);
-    }
-
-    .btn-ver-roteiro:hover {
-      background: #D94819;
-      color: #FFFFFF;
-      border-color: #D94819;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(217, 72, 25, 0.25);
-    }
-
-    .rec-indicator {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-    }
-
-    .rec-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: #EF4444;
-      animation: recPulse 1.2s infinite ease-in-out;
-    }
-
-    @keyframes recPulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.3; transform: scale(0.85); }
-    }
-
-    /* Barra de Controle Interativo Superior (Filtros & Simulador) */
-    .control-toolbar {
-      background: #FFFFFF;
-      border: 1.5px solid var(--border);
-      border-radius: 20px;
-      padding: 16px 22px;
-      margin: 28px 0 36px 0;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 16px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.04);
-      position: sticky;
-      top: 86px;
-      z-index: 95;
-      backdrop-filter: blur(12px);
-    }
-
-    .filter-tabs {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-
-    .filter-tab {
-      background: #F7F4F0;
-      border: 1px solid var(--border);
-      color: var(--text-body);
-      padding: 8px 16px;
-      border-radius: 30px;
-      font-size: 12.5px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .filter-tab:hover {
-      background: #EBE5DF;
-      color: var(--text-dark);
-    }
-
-    .filter-tab.active {
-      background: #0F172A;
-      color: #FFFFFF;
-      border-color: #0F172A;
-      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.25);
-    }
-
-    .budget-slider-box {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      background: #FBF9F6;
-      padding: 6px 14px;
-      border-radius: 14px;
-      border: 1px solid var(--border);
-    }
-
-    .budget-slider-box label {
-      font-size: 12px;
-      font-weight: 700;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    .budget-pill-select {
-      display: flex;
-      gap: 5px;
-    }
-
-    .btn-budget-val {
-      border: none;
-      background: #FFFFFF;
-      color: var(--text-dark);
-      font-size: 12px;
-      font-weight: 700;
-      padding: 5px 12px;
-      border-radius: 8px;
-      cursor: pointer;
-      border: 1px solid var(--border);
-      transition: all 0.18s ease;
-    }
-
-    .btn-budget-val.active {
-      background: #0081FB;
-      color: #FFFFFF;
-      border-color: #0081FB;
-      box-shadow: 0 2px 8px rgba(0, 129, 251, 0.3);
-    }
-
-    /* Efeito de Foco por Coluna */
-    .flow-column {
-      transition: opacity 0.35s ease, filter 0.35s ease, transform 0.35s ease;
-    }
-
-    .flow-columns-grid.focus-c1 .flow-column:not(.col-c1),
-    .flow-columns-grid.focus-c2 .flow-column:not(.col-c2),
-    .flow-columns-grid.focus-c3 .flow-column:not(.col-c3) {
-      opacity: 0.38;
-      filter: grayscale(0.65);
-      transform: scale(0.98);
-    }
-
-    /* Modal Interativo do Roteiro de Gravação de Provador */
-    .script-modal-backdrop {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(15, 23, 42, 0.65);
-      backdrop-filter: blur(8px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      z-index: 1000;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .script-modal-backdrop.active {
-      opacity: 1;
-      pointer-events: auto;
-    }
-
-    .script-modal-card {
-      background: #FFFFFF;
-      border-radius: 24px;
-      max-width: 680px;
-      width: 100%;
-      max-height: 90vh;
-      overflow-y: auto;
-      padding: 32px;
-      box-shadow: 0 25px 60px rgba(0,0,0,0.3);
-      position: relative;
-      transform: translateY(30px) scale(0.96);
-      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-      border: 1px solid var(--border);
-    }
-
-    .script-modal-backdrop.active .script-modal-card {
-      transform: translateY(0) scale(1);
-    }
-
-    .modal-close-btn {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      background: #F1ECE6;
-      border: none;
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      font-size: 18px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--text-dark);
-      transition: all 0.2s ease;
-    }
-
-    .modal-close-btn:hover {
-      background: #0F172A;
-      color: #FFFFFF;
-    }
-
-    .modal-tab-nav {
-      display: flex;
-      gap: 8px;
-      margin: 18px 0 22px 0;
-      border-bottom: 1.5px solid var(--border);
-      padding-bottom: 12px;
-    }
-
-    .modal-tab-btn {
-      background: transparent;
-      border: none;
-      font-size: 13px;
-      font-weight: 700;
-      padding: 7px 14px;
-      border-radius: 8px;
-      color: var(--text-muted);
-      cursor: pointer;
-      transition: all 0.2s ease;
-    }
-
-    .modal-tab-btn.active {
-      background: #FFF0EB;
-      color: #D94819;
-    }
-
-    .script-content-section {
-      background: #FBF9F6;
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 20px;
-      font-size: 14px;
-      line-height: 1.7;
-    }
-
-    .script-timeline-step {
-      margin-bottom: 16px;
-      padding-bottom: 16px;
-      border-bottom: 1px dashed #E2D9CF;
-    }
-    .script-timeline-step:last-child {
-      margin-bottom: 0;
-      padding-bottom: 0;
-      border-bottom: none;
-    }
-    .script-step-tag {
-      font-size: 11px;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      display: inline-block;
-      margin-bottom: 4px;
-    }
-    .tag-hook { color: #D94819; }
-    .tag-body { color: #047857; }
-    .tag-cta { color: #0081FB; }
-
-    /* Scroll Reveal Cascading */
-    .reveal-item {
-      opacity: 0;
-      transform: translateY(22px);
-      transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .reveal-item.revealed {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  
-    /* =========================================================
-       FOTOREALISMO, REMOTION REELS STUDIO & ELEVENLABS AUDIO
-       ========================================================= */
-
-    /* Mockup Fotográfico do Criativo Reels no Card */
-    .creative-photo-preview {
-      position: relative;
-      width: 100%;
-      height: 220px;
-      border-radius: 14px;
-      overflow: hidden;
-      margin: 12px 0;
-      border: 1px solid rgba(0,0,0,0.08);
-      box-shadow: 0 4px 14px rgba(0,0,0,0.06);
-    }
-
-    .creative-photo-img {
+    .creative-img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center 20%;
-      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+      object-position: center 25%;
+      transition: transform 0.4s ease;
     }
 
-    .creative-photo-preview:hover .creative-photo-img {
-      transform: scale(1.06);
+    .creative-visual-card:hover .creative-img {
+      transform: scale(1.05);
     }
 
-    .reels-overlay-glass {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, transparent 40%, rgba(0,0,0,0.65) 100%);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 10px 12px;
-      pointer-events: none;
-    }
-
-    .reels-top-badges {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .reels-pill {
-      background: rgba(0,0,0,0.55);
-      backdrop-filter: blur(6px);
-      color: #FFFFFF;
-      font-size: 10px;
-      font-weight: 700;
-      padding: 3px 8px;
-      border-radius: 20px;
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      border: 1px solid rgba(255,255,255,0.2);
-    }
-
-    .reels-bottom-info {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-    }
-
-    .reels-caption-short {
-      color: #FFFFFF;
-      font-size: 11px;
-      font-weight: 600;
-      line-height: 1.3;
-      text-shadow: 0 2px 4px rgba(0,0,0,0.8);
-      max-width: 80%;
-    }
-
-    .play-btn-circle {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.9);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-      color: #140A04;
-      font-size: 13px;
-    }
-
-    /* Player de Áudio IA ElevenLabs Style */
-    .elevenlabs-bar {
-      margin-top: 8px;
-      background: #F4EFEB;
-      border: 1px solid #E6DED6;
-      border-radius: 12px;
-      padding: 8px 12px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      transition: all 0.2s ease;
-    }
-
-    .elevenlabs-bar:hover {
-      background: #EFE8E2;
-      border-color: #D9CFC4;
-    }
-
-    .btn-audio-play {
-      background: #D94819;
-      color: #FFFFFF;
-      border: none;
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      font-size: 11px;
-      flex-shrink: 0;
-      box-shadow: 0 2px 6px rgba(217, 72, 25, 0.35);
-      transition: transform 0.15s ease;
-    }
-
-    .btn-audio-play:hover {
-      transform: scale(1.1);
-    }
-
-    .audio-waveform-wrap {
-      display: flex;
-      align-items: center;
-      gap: 3px;
-      flex-grow: 1;
-      height: 20px;
-    }
-
-    .waveform-bar {
-      width: 3px;
-      background: #B87A63;
-      border-radius: 3px;
-      height: 6px;
-      transition: height 0.15s ease;
-    }
-
-    .elevenlabs-bar.playing .waveform-bar {
-      animation: waveDance 1s infinite ease-in-out alternate;
-    }
-    .elevenlabs-bar.playing .waveform-bar:nth-child(2) { animation-delay: 0.15s; }
-    .elevenlabs-bar.playing .waveform-bar:nth-child(3) { animation-delay: 0.3s; }
-    .elevenlabs-bar.playing .waveform-bar:nth-child(4) { animation-delay: 0.45s; }
-    .elevenlabs-bar.playing .waveform-bar:nth-child(5) { animation-delay: 0.2s; }
-    .elevenlabs-bar.playing .waveform-bar:nth-child(6) { animation-delay: 0.35s; }
-    .elevenlabs-bar.playing .waveform-bar:nth-child(7) { animation-delay: 0.5s; }
-    .elevenlabs-bar.playing .waveform-bar:nth-child(8) { animation-delay: 0.25s; }
-
-    @keyframes waveDance {
-      0% { height: 4px; }
-      100% { height: 18px; background: #D94819; }
-    }
-
-    .audio-voice-tag {
-      font-size: 10px;
-      font-weight: 700;
-      color: var(--text-muted);
-      white-space: nowrap;
-      display: flex;
-      align-items: center;
-      gap: 4px;
-    }
-
-    /* SEÇÃO ESPECIAL: REMOTION STUDIO LIVE MOCKUP */
-    .remotion-studio-sec {
-      margin-top: 60px;
-      background: #FFFFFF;
-      border: 1.5px solid var(--border);
-      border-radius: 28px;
-      padding: 36px 32px;
-      box-shadow: 0 16px 45px rgba(0,0,0,0.04);
-    }
-
-    .remotion-header-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 16px;
-      margin-bottom: 28px;
-    }
-
-    .remotion-badge {
-      background: linear-gradient(135deg, #0081FB 0%, #7928CA 100%);
-      color: #FFFFFF;
-      font-size: 11.5px;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-      padding: 5px 14px;
-      border-radius: 20px;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .remotion-grid {
-      display: grid;
-      grid-template-columns: 360px 1fr;
-      gap: 36px;
-      align-items: center;
-    }
-
-    @media (max-width: 960px) {
-      .remotion-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    /* Smartphone Frame Realista (iPhone 16 Pro Style) */
-    .phone-mockup-frame {
-      width: 100%;
-      max-width: 330px;
-      height: 600px;
-      background: #000000;
-      border-radius: 46px;
-      padding: 11px;
-      box-shadow: 0 25px 65px rgba(0,0,0,0.25), 0 0 0 2px #333333;
-      margin: 0 auto;
-      position: relative;
-    }
-
-    .phone-screen {
-      width: 100%;
-      height: 100%;
-      border-radius: 36px;
-      overflow: hidden;
-      position: relative;
-      background: #111111;
-    }
-
-    .phone-dynamic-island {
+    .reels-badge-overlay {
       position: absolute;
       top: 10px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100px;
-      height: 24px;
-      background: #000000;
+      left: 10px;
+      background: rgba(0, 0, 0, 0.65);
+      backdrop-filter: blur(8px);
+      color: #FFFFFF;
+      padding: 4px 9px;
       border-radius: 20px;
-      z-index: 20;
-    }
-
-    .phone-video-bg {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: all 0.4s ease;
-    }
-
-    /* Legendas Estilo Remotion / CapCut Animadas */
-    .remotion-captions-box {
-      position: absolute;
-      bottom: 85px;
-      left: 20px;
-      right: 20px;
-      text-align: center;
-      z-index: 15;
-    }
-
-    .remotion-word {
-      display: inline-block;
-      font-size: 16px;
-      font-weight: 900;
-      text-transform: uppercase;
-      color: #FFFFFF;
-      background: rgba(0, 0, 0, 0.7);
-      padding: 3px 7px;
-      border-radius: 6px;
-      margin: 2px;
-      text-shadow: 0 2px 4px rgba(0,0,0,0.8);
-      letter-spacing: 0.5px;
-      transition: all 0.2s ease;
-    }
-
-    .remotion-word.highlight {
-      color: #FFE600;
-      transform: scale(1.12);
-      background: #000000;
-    }
-
-    .phone-instagram-ui {
-      position: absolute;
-      bottom: 18px;
-      left: 18px;
-      right: 18px;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      z-index: 15;
-      color: #FFFFFF;
-    }
-
-    .phone-author-row {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .phone-avatar-mini {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      border: 1.5px solid #FFFFFF;
-      object-fit: cover;
-    }
-
-    .phone-author-name {
-      font-size: 12.5px;
-      font-weight: 700;
-      text-shadow: 0 1px 3px rgba(0,0,0,0.8);
-    }
-
-    .phone-actions-col {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 12px;
-      font-size: 18px;
-    }
-
-    .phone-action-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 2px;
       font-size: 10px;
       font-weight: 700;
-    }
-
-    /* Controles do Remotion Studio ao Lado */
-    .remotion-controls-col {
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-    }
-
-    .script-select-card {
-      background: #FBF9F6;
-      border: 1.5px solid var(--border);
-      border-radius: 16px;
-      padding: 16px 20px;
-      cursor: pointer;
-      transition: all 0.22s ease;
-      display: flex;
+      display: inline-flex;
       align-items: center;
-      justify-content: space-between;
+      gap: 5px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
     }
 
-    .script-select-card:hover {
-      background: #FFFFFF;
-      border-color: #D94819;
-      transform: translateX(4px);
-    }
-
-    .script-select-card.active {
-      background: #FFFFFF;
-      border-color: #D94819;
-      box-shadow: 0 6px 18px rgba(217, 72, 25, 0.12);
-    }
-
-    .script-select-card.active .script-card-num {
-      background: #D94819;
-      color: #FFFFFF;
-    }
-
-    .script-card-num {
-      width: 34px;
-      height: 34px;
-      border-radius: 50%;
-      background: #EFEAE5;
-      color: var(--text-dark);
+    .reels-format-pill {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      background: rgba(255, 255, 255, 0.92);
+      color: #111827;
+      padding: 3px 8px;
+      border-radius: 8px;
+      font-size: 10px;
       font-weight: 800;
-      font-size: 13px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      margin-right: 14px;
-      transition: all 0.2s ease;
     }
 
-    /* SEÇÃO DE SHOWROOM & CONVERSÃO REAL WHATSAPP */
-    .showroom-gallery-grid {
-      margin-top: 45px;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-
-    @media (max-width: 900px) {
-      .showroom-gallery-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .showroom-photo-card {
-      background: #FFFFFF;
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.03);
-      transition: transform 0.25s ease;
-    }
-
-    .showroom-photo-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 14px 34px rgba(0,0,0,0.08);
-    }
-
-    .showroom-card-img {
-      width: 100%;
-      height: 190px;
-      object-fit: cover;
-    }
-
-    .showroom-card-content {
+    .creative-content {
       padding: 16px 18px;
     }
 
-    .showroom-card-content h4 {
+    .creative-title {
       font-size: 15px;
-      color: var(--text-dark);
-      margin-bottom: 4px;
+      color: var(--text-main);
+      margin-bottom: 6px;
     }
 
-    .showroom-card-content p {
-      font-size: 12.5px;
+    .script-summary {
+      background: #F8F5F1;
+      border-radius: 10px;
+      padding: 10px 12px;
+      font-size: 11.5px;
+      color: var(--text-body);
+      line-height: 1.5;
+      margin-top: 8px;
+    }
+
+    .script-step {
+      margin-bottom: 5px;
+    }
+    .script-step:last-child { margin-bottom: 0; }
+    .script-step strong { color: var(--text-main); font-size: 11px; text-transform: uppercase; }
+
+    /* NÍVEL 4: DESTINOS FINAIS */
+    .destinos-section {
+      margin-top: 45px;
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 28px 30px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .destinos-header {
+      text-align: center;
+      margin-bottom: 22px;
+    }
+
+    .destinos-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    @media (max-width: 860px) {
+      .destinos-grid { grid-template-columns: 1fr; }
+    }
+
+    .destino-box {
+      background: #FAF7F4;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px;
+      transition: all 0.2s ease;
+    }
+
+    .destino-box:hover {
+      background: #FFFFFF;
+      border-color: var(--gold);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+    }
+
+    .destino-ico-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .destino-ico {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      border: 1px solid var(--border);
+    }
+
+    .destino-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .destino-desc {
+      font-size: 12px;
       color: var(--text-muted);
       line-height: 1.5;
     }
 
-    /* Simulação de WhatsApp Chat Realista */
-    .whatsapp-simulation-box {
-      background: #EFEAE2;
-      background-image: radial-gradient(#D6CEBE 0.75px, transparent 0.75px);
-      background-size: 14px 14px;
-      border-radius: 16px;
-      padding: 18px;
+    /* Rodapé Executivo & CTA */
+    .cta-panel {
+      margin-top: 40px;
+      text-align: center;
+      background: linear-gradient(135deg, #1C130E 0%, #2B1D16 100%);
+      color: #FAF5F1;
+      padding: 36px 28px;
+      border-radius: 24px;
+      box-shadow: 0 16px 40px rgba(28, 19, 14, 0.15);
+    }
+
+    .cta-panel h2 {
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+
+    .cta-panel p {
+      font-size: 14px;
+      color: #D4C9C1;
+      max-width: 600px;
+      margin: 0 auto 22px auto;
+      line-height: 1.6;
+    }
+
+    .btn-wa-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      background: #25D366;
+      color: #FFFFFF;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 14px;
+      padding: 13px 26px;
+      border-radius: 30px;
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+      transition: all 0.2s ease;
+    }
+
+    .btn-wa-action:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
+      background: #20BD5A;
+    }
+
+    .autoridade-pills {
+      margin-top: 24px;
       display: flex;
-      flex-direction: column;
-      gap: 12px;
-      border: 1px solid #D5CCBF;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      font-size: 12px;
+      color: #A3968C;
     }
 
-    .chat-bubble {
-      max-width: 86%;
-      padding: 10px 14px;
-      border-radius: 12px;
-      font-size: 12.5px;
-      line-height: 1.45;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.12);
-      position: relative;
-    }
-
-    .bubble-customer {
-      align-self: flex-start;
-      background: #FFFFFF;
-      color: #111B21;
-      border-top-left-radius: 2px;
-    }
-
-    .bubble-store {
-      align-self: flex-end;
-      background: #D9FDD3;
-      color: #111B21;
-      border-top-right-radius: 2px;
-    }
-
-    .chat-time {
-      font-size: 9.5px;
-      color: #667781;
-      float: right;
-      margin-top: 4px;
-      margin-left: 8px;
+    .autoridade-pills span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
     }
   </style>
-
-</style>
 </head>
 <body>
 
-  <!-- Top Announcement Bar -->
+  <!-- Top Bar -->
   <div class="top-bar">
     <div class="top-brand-indicator">
-      <!-- Official Meta Logo (Small) -->
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="#0081FB">
-        <path d="M6.915 4.03c-1.968 0-3.683 1.28-4.871 3.113C.704 9.208 0 11.883 0 14.449c0 .706.07 1.369.21 1.973a6.624 6.624 0 0 0 .265.86 5.297 5.297 0 0 0 .371.761c.696 1.159 1.818 1.927 3.593 1.927 1.497 0 2.633-.671 3.965-2.444.76-1.012 1.144-1.626 2.663-4.32l.756-1.339.186-.325c.061.1.121.196.183.3l2.152 3.595c.724 1.21 1.665 2.556 2.47 3.314 1.046.987 1.992 1.22 3.06 1.22 1.075 0 1.876-.355 2.455-.843a3.743 3.743 0 0 0 .81-.973c.542-.939.861-2.127.861-3.745 0-2.72-.681-5.357-2.084-7.45-1.282-1.912-2.957-2.93-4.716-2.93-1.047 0-2.088.467-3.053 1.308-.652.57-1.257 1.29-1.82 2.05-.69-.875-1.335-1.547-1.958-2.056-1.182-.966-2.315-1.303-3.454-1.303zm10.16 2.053c1.147 0 2.188.758 2.992 1.999 1.132 1.748 1.647 4.195 1.647 6.4 0 1.548-.368 2.9-1.839 2.9-.58 0-1.027-.23-1.664-1.004-.496-.601-1.343-1.878-2.832-4.358l-.617-1.028a44.908 44.908 0 0 0-1.255-1.98c.07-.109.141-.224.211-.327 1.12-1.667 2.118-2.602 3.358-2.602zm-10.201.553c1.265 0 2.058.791 2.675 1.446.307.327.737.871 1.234 1.579l-1.02 1.566c-.757 1.163-1.882 3.017-2.837 4.338-1.191 1.649-1.81 1.817-2.486 1.817-.524 0-1.038-.237-1.383-.794-.263-.426-.464-1.13-.464-2.046 0-2.221.63-4.535 1.66-6.088.454-.687.964-1.226 1.533-1.533a2.264 2.264 0 0 1 1.088-.285z"/>
-      </svg>
-      <span>Plano Estrutural Meta Ads • Gestão de Tráfego João Pedro Schmitz</span>
+      <span class="status-dot"></span>
+      <span>Planejamento Oficial Meta Ads • Stay Style</span>
     </div>
-    <button class="btn-pdf" onclick="window.print()">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>
-      Salvar em PDF / Imprimir
-    </button>
+    <div>Gestão Estratégica: João Pedro Schmitz</div>
   </div>
 
-  <!-- Header Nav com a LOGO REAL da Stay Style -->
+  <!-- Header com Logo Real da Marca -->
   <header>
     <div class="container nav-wrap">
-      <div class="logo-real-wrap">
-        <!-- Logo Oficial Stay Style (Arquivo real LOGO.jpg) -->
-        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QBYRXhpZgAATU0AKgAAAAgAAgESAAMAAAABAAEAAIdpAAQAAAABAAAAJgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAACgKADAAQAAAABAAACgAAAAAD/7QA4UGhvdG9zaG9wIDMuMAA4QklNBAQAAAAAAAA4QklNBCUAAAAAABDUHYzZjwCyBOmACZjs+EJ+/8AAEQgCgAKAAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/bAEMABgYGBgYGCgYGCg4KCgoOEg4ODg4SFxISEhISFxwXFxcXFxccHBwcHBwcHCIiIiIiIicnJycnLCwsLCwsLCwsLP/bAEMBBwcHCwoLEwoKEy4fGh8uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLv/dAAQAKP/aAAwDAQACEQMRAD8A+nKKSioLFopKKACiiloAKKKKACkpaSgAooooAWkoooAKKKWgAooooAKSlooASlpKKACloooASiiigAooooAKKWkoAWiiigApKWkoAKKKKACiiloAKKKKACiikoAKWikoAWikpaAEpaKSgBaSlpKAClpKKACilpKACiiloAKKKKACiiigApKKKAFpKKKAFopKKACiiigAopaSgAooooAKKKKAClpKWgAoopKACilooA//0PpuiiioLCiiigAopaKACikooAKWkooAKWkooAKKKKACilpKAFopKKACilooAKSiloAKSiigBaSiloASlpKKACilpKACiiigApaSigApaSigAooooAKWkooAWkoooAWkoooAKKKWgAoopKACiiigBaSlooASilpKACilooAKKSloASiiigAooooAWkpaSgAooooAKKKKAFpKKKACiiloASiiigAooooAWkpaSgApaSloA//R+nKSilqCxKKKKACiiloASilpKAClpKWgAoopKACiiigApaSigBaKKKACkoooAPpRS0lABRS0UAJS0lFABRRRQAUUUUAFFFFABRRRQAtJRRQAUtJRQAUUUtABSUUtACUtJRQAUUUtABSUUUALRRSUAFLRRQAUlFFABS0lLQAlLRSUALSUtJQAtFJS0AJRRRQAtJRRQAUUUUAFLRSUAFFLSUAFLSUUAFLSUtACUUUUAFLSUtAH/9L6bpaSioLFpKWigBKKKKACiiigAooooAKKKKACilpKACiiigBaSiigApaKSgAooooAKWkpaAEooooAKKWkoAKKWkoAKKKKACiiigAopaKAEooooAKKKWgBKWkooAKKKWgBKKKKACiiigBaSlpKACiiigApaKKACkoooAKWkooAWkpaSgAopaSgBaSiloASiiigAooooAKKKWgBKKKWgBKWkooAWkoooAKKKKAClpKWgD//0/pyik70VBYUtFFABSUtJQAUUtJQAUUUUAFFFFABRRS0AJS0lFABS0lFAC0lLSUAFFFFABS0UlABRRRQAUtFFACUUUtACUUtJQAtFJRQAtJRRQAUUUUAFFLSUAFFFFABRRRQAUUUUAFFFFABRS0lABRRS0AFFJRQAtJRRQAUUUUAFFFFAC0UlLQAlFFFABRRRQAUUUUAFFLRQAUUUlABRRRQAUUUUALSUUUAFFFFAH//1PpuiiioLClopKACiiigAooooAKKKKACiiigBaSiigApaKSgAooooAKKKWgAoopKAFpKWkoAKKKKACiiigApaSloAKSlooASlopKACilpKACiiloASlpKKACiiigAooooAKWikoAKKKWgBKWkpaAEpaKKACikpaACiiigBKKKKACiiigAooooAKKKKACloooAKSiigBaSiigBaSlooASiiigAoopaACkopaAEpaSloA//9X6bpaSlqCwooooASiiloASilpKAClpKKAFpKWigApKKKACiiigApaKSgBaKKKACiiigAoopKACilooAKKKKACiiigApKKKACiiigAooooAKKWkoAKKKWgBKKKKACloooAKSlooASiiloASlopKAFooooAKKKKAEpaKKACkopaAEooooAKKKKACiiigAopaKAEooooAKWikoAKWiigApKWigBKKKKACloooAKKKSgD/1vpuiiioLFopKWgBKKWigBKWiigAoopKAFooooASiiigAopaSgBaKSigBaSiloAKKSloASiiigApaSigBaKKKACkpaSgAooooAWiiigBKKKKACiiigAooooAKKKKACiiigBaKKKAEopaSgAooooAWkpaSgAooooAWiiigAooooAKSiigAoopaAEopaSgBaKSigAooooAKKKKACiiigAooooAKKWkoAKKWkoAWikpaAP/1/pykpaKgsSiiloASlopKAFopKWgAopKWgApKKKACiiigAoopaAEooooAKKKKACilooASiiigAoopaACiiigBKKKKAClopKACiiigAooooAKKKKAFpKKKACiiloASiiigApaSloASiiloASilpKACiiigAopaSgBaKSloAKSiigAooooAKWkooAKWkpaAEooooAKKKKACiiigBaSlpKACiiigApaSigApaSigAopaSgD/9D6bpaKSoLCloooASiiigAooooAKKKKACiiigBaKKSgBaSiigBaSiigAooooAWkoooAKKKKAFpKKKACiiigAooooAKKWkoAKKKKACiiigAooooAKKKKAFopKKAFpKKKACilpKAFpKKKAFpKKKACiiigBaSiigAopaSgBaKKKAEooooAKKKKACilpKAFpKWkoAKKWkoAKKKWgBKKKKAFpKWigBKKKKACiiigBaSiigD/0fpyikoqCwooooAKKWkoAWkoooAKKKKACiiigAooooAWkoooAKWkooAKWkpaAEooooAKWkooAKKKKACiiigApaSigBaSiigBaSiloASiiloASiiigApaSloASiiigAooooAKKKKAFopKKACiiigAooooAKKKKACiiigAooooAWkoooAKKKKAFopKKAFpKKKACiiigApaSigBaKKKAEoopaACikpaAEpaSloAKKSloA//0vpuiiioLCiiigAopaSgBaKSloAKKKKACkoooAKKKKACiiigAooooAKKKKACiiloASiiigAooooAKKKKACiiigApaSigAooooAKWkpaAEooooAKKKKACiiigAooooAWkoooAKKKKACiiigAooooAKKWkoAKKKKAClpKKACiiloASiiigApaKSgAooooAKKKKACiiloASiiigAooooAWikooAKKKKAFooooA//9P6boopagsSilooASilpKAClpKWgBKWkooAWkpaSgBaSiloASiiigAooooAKKKKACiiigAoopaAEoopaAEopaSgAooooAKKKKACiiigAooooAKKKKACiiigAopaSgAooooAKKWkoAKKWkoAKKKKACiiigAooooAWkoooAKKKKAFpKKKACiiigAooooAKKKKACiiigApaSloASiiigBaSiigApaSigAooooAKKWkoA//1PpulpKWoLCiiigApKWigApKWigAooooAKSlooAKSiigBaSlpKACloooAKKSigAopaSgAopaSgAoopaAEoopaAEooooAKKKKACiiigAooooAKKWkoAKKKKACiiigApaSigAooooAKKWkoAKKKKAClpKKACiiigApaKSgAopaSgAooooAKKWigBKKKKACiiloASiiigAoopaAEpaKKACikpaAEooooAWkoooAKWiigD//1fpulpKKgsWikooAWikpaACkpaKACiikoAWkpaKAEooooAKKKKACloooAMZrI1nXdJ8P2hvdYuUtohxlzjJ9AOpPsKbr+tWnhzR7nWb44itkLkdyewHuTxXh3w8sJ/iTq1x448VDzobaTy7S2PMSN1+70O0Y+p60DPSbTxvf6yvmeHtEu7qE/dnmK20bD1UyHcR+FWW1rxvCCX8PxuPSO8Qt+RUD9a7YLjp26Up5pAeSz/FzTNKuxZeJ9OvdJkPQyx70PuGQnI+gr0LR/EGh6/B9o0e8iuV77GyR9R1H407W9D0vxDp0mmatAs8LjuOVPqp6gj1FfJul+E9R8EfFbTtMkdzFJcKYZASPMiY98enQigD7JpKWkpiFoopKACsfX9csvDekz6zqW4QW4BfaMtyQBgfU1sV5l8XEnufBc2nWyF5rueCGNR3ZpBgUDMgfHPwTIQsY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agsSlpKKAClpKKACloooASlpKWgAopKKAFpKKKAClpKKACloooAKSlpKACiiigAooooAKKKKACiiigAooooAKKWkoAKKKKACiiigAooooAKKKWgBKKKKACiiigBaSiigAooooAWkopaAEopaSgAooooAKKKKACiiigApaSigApaSigAopaSgAooooAWikpaACikpaAEopaSgApaSigBaSlpKACiiigAopaSgD//S+m6KKWoLEopaKAEopaKAEpaKKAEopaSgAooooAKKKKAFpKKKAFpKWkoAKKKKACiiigAooooAKKKKACiiigAooooAWkpaSgAooooAKKKKACiiigAoopaAEoopaAEopaSgAooooAKKWkoAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAFpKKWgBKKWigBKKKWgAopKWgAopKWgAopKKAFpKKKACiiigAo7UUUAf/9P6bpaSlqCwooooAKKKKACikpaACkpaSgAooooAKKKKACiiigAooooAKKWkoAKKKWgBKKKKAFpKKKACiiigApaSigApaSigApaSigBaSiigBaSiigAopaKACiiigBKKWigBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiloASilpKACiiigApaSigBaKKSgAooooAKKKKACiiigAooooAKKKKACiiigD/1PpulopKgsWiikoAWkpaSgAooooAWkoooAKKKKAFpKKKACiiigAooooAKKKKACiiigAoopaAEooooAKKKKACiiigBaKSigAoopaAEoopaAEooooAKWkooAKWkooAWkoooAWkoooAKKKKACiiigAooooAKKKWgBKKKKAFpKKWgBKKKKACiiigAooooAKKKKACiiigBaKSigAooooAWkpaKAEooooAKKKKAFpKKKAP/9X6cpKKWoLEoopaAEooooAKWkooAWkoooAWkopaAEpaSloASlopKAFpKKKACilpKACiiigAooooAKKKKACiiloASiiigAooooAKKKKACiiigAoopaAEoopaAEopaSgAoopaAEoopaAEooooAKKKKACiiigAoopaAEooooAKKKKAFpKKKACiiigBaSlpKAFpKKKACiiigAoopaAEopaKAEooooAKKKKACiiigAooooA//9b6boopagsSlpKWgBKKKKACilpKACiiigAooooAWiiigApKKWgBKKKWgBKKKKACiiigBaKKSgBaKKSgAooooAKWiigApKKKACiiloASiiigAooooAKWiigApKKKACilooASiiigAooooAKKKKACiiigBaSlpKAFpKKKACiiigAooooAKWkpaACkpaSgAooooAWkoooAKKKKACloooAKKSloAKKKKAEooooAWiiigD//1/puiiioLFoopKAFpKKKACiiigBaSiigApaSloASloooASiiloASlopKACiiigBaKSigBaSlooAKSlooASiiigAooooAKKKWgBKKKKACiiigAooooAWkpaSgAooooAKKKKAClpKWgBKWikoAKKKKACiiigBaKKKAEopaSgAooooAKWkpaAEpaSloAKKSigBaKKSgBaSlooASlpKKAFopKKAFooooAKSiigAooooAKWiigD//0PpuiiioLClpKKACiiigApaSloAKSiloAKKSloAKSlpKAFpKKWgBKKKKACiiloASilooAKKKKACiikoAKKKKAFpKKWgBKWiigBKKKWgBKKKKACiiloAKSiigApaSigAooooAKKKKAClpKKACilpKACiiigBaSlooAKSlooASilooASiiigApaSloAKKKKAEooooAWikpaACiiigBKWikoAWkpaKAEopaKAEooooAKWiigD//0fpuiloqCwpKKKAClpKWgApKWkoAKWiigBKKKKACloooAKKKKACkpaKACkpaSgAoopaACiiigApKKKACiiloASloooASloooASiiigAooooAWkopaACiikoAKKKWgBKKKKAClpKKAFpKKKACiiigAoopaACiiigAooooASiiigApaSloAKSiigApaKKAEopaSgAooooAWikpaACiikoAWikpaAEopaSgAooooAKWiigD/9L6bpaSlqCxKKWkoAWiiigAopKWgApKWkoAKKWkoAKKKKAClpKKACiiloAKSlpKAFpKKKACiiigAooooAKWkooAWiikoAWikpaAEpaKSgAooooAKKKKAClopKACiiigBaKSloASiiigAooooAKKKWgAoopKAClpKKAFopKKAFpKKKAClopKACiiigBaKSloAKSlpKAClopKAFpKWigBKKKWgBKKWigBKKKKACiiloASiiigD//T+m6KKKgsKKKKAClpKKACiiloAKSlpKAClpKKACiiigAooooAKWkooAWkpaSgBaSlpKACiiigAopaKAEoopaAEpaSigBaKSigBaSiloAKSlpKACiiigBaKSloAKKKKAEpaKKACkpaSgApaKKACiiigAoopKAFopKKAFpKWigBKKKWgBKWkooAKKWkoAWikooAKWkpaACikooAWiikoAWikpaACikooAKWkooAKWkpaACikpaAP//U+m6KKKgsKKKKACilpKACiiigAoopaAEpaSigApaSigAopaSgAooooAWiiigBKKKKACiiigAooooAWikpaACiiigBKKWigAopKKAFpKKKAClpKKACiiigAooooAKWkooAWkoooAKWiigBKWiigBKKKKACilpKAClpKWgAooooASiiigBaSlooASiiigBaKKKAEpaSigApaSigAopaSgAoopaAEopaKAEooooAWikpaAP/1fpuiilqCxKKKKACiiigAooooAKWkooAKKKKAClpKKAFopKWgApKKKAFpKKWgBKKWkoAKKKKACiiigAooooAKWkooAKKKKACiiigAooooAKKKKACiiloAKKKSgAoopaAEopaKAEpaSloAKKKSgBaSlpKACiiigBaKKKACiiigBKKKKAFopKWgApKWigBKKKKACiiigApaKKAEooooAWiikoAWikooAKKWigBKKKKAP/W+nKSloqCxKKWigAooooAKKSigAooooAKKKKACilooASilpKACilooAKSlpKACiiigAooooAKKKKAFpKKWgBKKWkoAWkopaAEoopaAEooooAKWkpaAEooooAKKWigBKKWkoAKKKKAClopKACilpKACilpKACilpKACiiloASlpKKACilpKAClpKKAFpKKKACloooASlpKKAFpKWkoAKKKKAFpKKKAClpKKAFpKKKACiiigD//2Q==" alt="Stay Style Logo" class="stay-style-logo-img" onerror="this.src='../LOGO.jpg'">
-        <div class="brand-titles-group">
-          <span class="brand-title-main serif">Stay Style</span>
-          <span class="brand-subtitle-tag">Showroom Santo André & E-commerce</span>
+      <div class="brand-group">
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QBYRXhpZgAATU0AKgAAAAgAAgESAAMAAAABAAEAAIdpAAQAAAABAAAAJgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAACgKADAAQAAAABAAACgAAAAAD/7QA4UGhvdG9zaG9wIDMuMAA4QklNBAQAAAAAAAA4QklNBCUAAAAAABDUHYzZjwCyBOmACZjs+EJ+/8AAEQgCgAKAAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/bAEMABgYGBgYGCgYGCg4KCgoOEg4ODg4SFxISEhISFxwXFxcXFxccHBwcHBwcHCIiIiIiIicnJycnLCwsLCwsLCwsLP/bAEMBBwcHCwoLEwoKEy4fGh8uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLv/dAAQAKP/aAAwDAQACEQMRAD8A+nKKSioLFopKKACiiloAKKKKACkpaSgAooooAWkoooAKKKWgAooooAKSlooASlpKKACloooASiiigAooooAKKWkoAWiiigApKWkoAKKKKACiiloAKKKKACiikoAKWikoAWikpaAEpaKSgBaSlpKAClpKKACilpKACiiloAKKKKACiiigApKKKAFpKKKAFopKKACiiigAopaSgAooooAKKKKAClpKWgAoopKACilooA//0PpuiiioLCiiigAopaKACikooAKWkooAKWkooAKKKKACilpKAFopKKACilooAKSiloAKSiigBaSiloASlpKKACilpKACiiigApaSigApaSigAooooAKWkooAWkoooAWkoooAKKKWgAoopKACiiigBaSlooASilpKACilooAKKSloASiiigAooooAWkpaSgAooooAKKKKAFpKKKACiiloASiiigAooooAWkpaSgApaSloA//R+nKSilqCxKKKKACiiloASilpKAClpKWgAoopKACiiigApaSigBaKKKACkoooAPpRS0lABRS0UAJS0lFABRRRQAUUUUAFFFFABRRRQAtJRRQAUtJRQAUUUtABSUUtACUtJRQAUUUtABSUUUALRRSUAFLRRQAUlFFABS0lLQAlLRSUALSUtJQAtFJS0AJRRRQAtJRRQAUUUUAFLRSUAFFLSUAFLSUUAFLSUtACUUUUAFLSUtAH/9L6bpaSioLFpKWigBKKKKACiiigAooooAKKKKACilpKACiiigBaSiigApaKSgAooooAKWkpaAEooooAKKWkoAKKWkoAKKKKACiiigAopaKAEooooAKKKWgBKWkooAKKKWgBKKKKACiiigBaSlpKACiiigApaKKACkoooAKWkooAWkpaSgAopaSgBaSiloASiiigAooooAKKKWgBKKKWgBKWkooAWkoooAKKKKAClpKWgD//0/pyik70VBYUtFFABSUtJQAUUtJQAUUUUAFFFFABRRS0AJS0lFABS0lFAC0lLSUAFFFFABS0UlABRRRQAUtFFACUUUtACUUtJQAtFJRQAtJRRQAUUUUAFFLSUAFFFFABRRRQAUUUUAFFFFABRS0lABRRS0AFFJRQAtJRRQAUUUUAFFFFAC0UlLQAlFFFABRRRQAUUUUAFFLRQAUUUlABRRRQAUUUUALSUUUAFFFFAH//1PpuiiioLClopKACiiigAooooAKKKKACiiigBaSiigApaKSgAooooAKKKWgAoopKAFpKWkoAKKKKACiiigApaSloAKSlooASlopKACilpKACiiloASlpKKACiiigAooooAKWikoAKKKWgBKWkpaAEpaKKACikpaACiiigBKKKKACiiigAooooAKKKKACloooAKSiigBaSiigBaSlooASiiigAoopaACkopaAEpaSloA//9X6bpaSlqCwooooASiiloASilpKAClpKKAFpKWigApKKKACiiigApaKSgBaKKKACiiigAoopKACilooAKKKKACiiigApKKKACiiigAooooAKKWkoAKKKWgBKKKKACloooAKSlooASiiloASlopKAFooooAKKKKAEpaKKACkopaAEooooAKKKKACiiigAopaKAEooooAKWikoAKWiigApKWigBKKKKACloooAKKKSgD/1vpuiiioLFopKWgBKKWigBKWiigAoopKAFooooASiiigAopaSgBaKSigBaSiloAKKSloASiiigApaSigBaKKKACkpaSgAooooAWiiigBKKKKACiiigAooooAKKKKACiiigBaKKKAEopaSgAooooAWkpaSgAooooAWiiigAooooAKSiigAoopaAEopaSgBaKSigAooooAKKKKACiiigAooooAKKWkoAKKWkoAWikpaAP/1/pykpaKgsSiiloASlopKAFopKWgAopKWgApKKKACiiigAoopaAEooooAKKKKACilooASiiigAoopaACiiigBKKKKAClopKACiiigAooooAKKKKAFpKKKACiiloASiiigApaSloASiiloASilpKACiiigAopaSgBaKSloAKSiigAooooAKWkooAKWkpaAEooooAKKKKACiiigBaSlpKACiiigApaSigApaSigAopaSgD/9D6bpaKSoLCloooASiiigAooooAKKKKACiiigBaKKSgBaSiigBaSiigAooooAWkoooAKKKKAFpKKKACiiigAooooAKKWkoAKKKKACiiigAooooAKKKKAFopKKAFpKKKACilpKAFpKKKAFpKKKACiiigBaSiigAopaSgBaKKKAEooooAKKKKACilpKAFpKWkoAKKWkoAKKKWgBKKKKAFpKWigBKKKKACiiigBaSiigD/0fpyikoqCwooooAKKWkoAWkoooAKKKKACiiigAooooAWkoooAKWkooAKWkpaAEooooAKWkooAKKKKACiiigApaSigBaSiigBaSiloASiiloASiiigApaSloASiiigAooooAKKKKAFopKKACiiigAooooAKKKKACiiigAooooAWkoooAKKKKAFopKKAFpKKKACiiigApaSigBaKKKAEoopaACikpaAEpaSloAKKSloA//0vpuiiioLCiiigAopaSgBaKSloAKKKKACkoooAKKKKACiiigAooooAKKKKACiiloASiiigAooooAKKKKACiiigApaSigAooooAKWkpaAEooooAKKKKACiiigAooooAWkoooAKKKKACiiigAooooAKKWkoAKKKKAClpKKACiiloASiiigApaKSgAooooAKKKKACiiloASiiigAooooAWikooAKKKKAFooooA//9P6boopagsSilooASilpKAClpKWgBKWkooAWkpaSgBaSiloASiiigAooooAKKKKACiiigAoopaAEoopaAEopaSgAooooAKKKKACiiigAooooAKKKKACiiigAopaSgAooooAKKWkoAKKWkoAKKKKACiiigAooooAWkoooAKKKKAFpKKKACiiigAooooAKKKKACiiigApaSloASiiigBaSiigApaSigAooooAKKWkoA//1PpulpKWoLCiiigApKWigApKWigAooooAKSlooAKSiigBaSlpKACloooAKKSigAopaSgAopaSgAoopaAEoopaAEooooAKKKKACiiigAooooAKKWkoAKKKKACiiigApaSigAooooAKKWkoAKKKKAClpKKACiiigApaKSgAopaSgAooooAKKWigBKKKKACiiloASiiigAoopaAEpaKKACikpaAEooooAWkoooAKWiigD//1fpulpKKgsWikooAWikpaACkpaKACiikoAWkpaKAEooooAKKKKACloooAMZrI1nXdJ8P2hvdYuUtohxlzjJ9AOpPsKbr+tWnhzR7nWb44itkLkdyewHuTxXh3w8sJ/iTq1x448VDzobaTy7S2PMSN1+70O0Y+p60DPSbTxvf6yvmeHtEu7qE/dnmK20bD1UyHcR+FWW1rxvCCX8PxuPSO8Qt+RUD9a7YLjp26Up5pAeSz/FzTNKuxZeJ9OvdJkPQyx70PuGQnI+gr0LR/EGh6/B9o0e8iuV77GyR9R1H407W9D0vxDp0mmatAs8LjuOVPqp6gj1FfJul+E9R8EfFbTtMkdzFJcKYZASPMiY98enQigD7JpKWkpiFoopKACsfX9csvDekz6zqW4QW4BfaMtyQBgfU1sV5l8XEnufBc2nWyF5rueCGNR3ZpBgUDMgfHPwTIQsY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agsSlpKKAClpKKACloooASlpKWgAopKKAFpKKKAClpKKACloooAKSlpKACiiigAooooAKKKKACiiigAooooAKKWkoAKKKKACiiigAooooAKKKWgBKKKKACiiigBaSiigAooooAWkopaAEopaSgAooooAKKKKACiiigApaSigApaSigAopaSgAooooAWikpaACikpaAEopaSgApaSigBaSlpKACiiigAopaSgD//S+m6KKWoLEopaKAEopaKAEpaKKAEopaSgAooooAKKKKAFpKKKAFpKWkoAKKKKACiiigAooooAKKKKACiiigAooooAWkpaSgAooooAKKKKACiiigAoopaAEoopaAEopaSgAooooAKKWkoAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAFpKKWgBKKWigBKKKWgAopKWgAopKWgAopKKAFpKKKACiiigAo7UUUAf/9P6bpaSlqCwooooAKKKKACikpaACkpaSgAooooAKKKKACiiigAooooAKKWkoAKKKWgBKKKKAFpKKKACiiigApaSigApaSigApaSigBaSiigBaSiigAopaKACiiigBKKWigBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiloASilpKACiiigApaSigBaKKSgAooooAKKKKACiiigAooooAKKKKACiiigD/1PpulopKgsWiikoAWkpaSgAooooAWkoooAKKKKAFpKKKACiiigAooooAKKKKACiiigAoopaAEooooAKKKKACiiigBaKSigAoopaAEoopaAEooooAKWkooAKWkooAWkoooAWkoooAKKKKACiiigAooooAKKKWgBKKKKAFpKKWgBKKKKACiiigAooooAKKKKACiiigBaKSigAooooAWkpaKAEooooAKKKKAFpKKKAP/9X6cpKKWoLEoopaAEooooAKWkooAWkoooAWkopaAEpaSloASlopKAFpKKKACilpKACiiigAooooAKKKKACiiloASiiigAooooAKKKKACiiigAoopaAEoopaAEopaSgAoopaAEoopaAEooooAKKKKACiiigAoopaAEooooAKKKKAFpKKKACiiigBaSlpKAFpKKKACiiigAoopaAEopaKAEooooAKKKKACiiigAooooA//9b6boopagsSlpKWgBKKKKACilpKACiiigAooooAWiiigApKKWgBKKKWgBKKKKACiiigBaKKSgBaKKSgAooooAKWiigApKKKACiiloASiiigAooooAKWiigApKKKACilooASiiigAooooAKKKKACiiigBaSlpKAFpKKKACiiigAooooAKWkpaACkpaSgAooooAWkoooAKKKKACloooAKKSloAKKKKAEooooAWiiigD//1/puiiioLFoopKAFpKKKACiiigBaSiigApaSloASloooASiiloASlopKACiiigBaKSigBaSlooAKSlooASiiigAooooAKKKWgBKKKKACiiigAooooAWkpaSgAooooAKKKKAClpKWgBKWikoAKKKKACiiigBaKKKAEopaSgAooooAKWkpaAEpaSloAKKSigBaKKSgBaSlooASlpKKAFopKKAFooooAKSiigAooooAKWiigD//0PpuiiioLClpKKACiiigApaSloAKSiloAKKSloAKSlpKAFpKKWgBKKKKACiiloASilooAKKKKACiikoAKKKKAFpKKWgBKWiigBKKKWgBKKKKACiiloAKSiigApaSigAooooAKKKKAClpKKACilpKACiiigBaSlooAKSlooASilooASiiigApaSloAKKKKAEooooAWikpaACiiigBKWikoAWkpaKAEopaKAEooooAKWiigD//0fpuiloqCwpKKKAClpKWgApKWkoAKWiigBKKKKACloooAKKKKACkpaKACkpaSgAoopaACiiigApKKKACiiloASloooASloooASiiigAooooAWkopaACiikoAKKKWgBKKKKAClpKKAFpKKKACiiigAoopaACiiigAooooASiiigApaSloAKSiigApaKKAEopaSgAooooAWikpaACiikoAWikpaAEopaSgAooooAKWiigD/9L6bpaSlqCxKKWkoAWiiigAopKWgApKWkoAKKWkoAKKKKAClpKKACiiloAKSlpKAFpKKKACiiigAooooAKWkooAWiikoAWikpaAEpaKSgAooooAKKKKAClopKACiiigBaKSloASiiigAooooAKKKWgAoopKAClpKKAFopKKAFpKKKAClopKACiiigBaKSloAKSlpKAClopKAFpKWigBKKKWgBKKWigBKKKKACiiloASiiigD//T+m6KKKgsKKKKAClpKKACiiloAKSlpKAClpKKACiiigAooooAKWkooAWkpaSgBaSlpKACiiigAopaKAEoopaAEpaSigBaKSigBaSiloAKSlpKACiiigBaKSloAKKKKAEpaKKACkpaSgApaKKACiiigAoopKAFopKKAFpKWigBKKKWgBKWkooAKKWkoAWikooAKWkpaACikooAWiikoAWikpaACikooAKWkooAKWkpaACikpaAP//U+m6KKKgsKKKKACilpKACiiigAoopaAEpaSigApaSigAopaSgAooooAWiiigBKKKKACiiigAooooAWikpaACiiigBKKWigAopKKAFpKKKAClpKKACiiigAooooAKWkooAWkoooAKWiigBKWiigBKKKKACilpKAClpKWgAooooASiiigBaSlooASiiigBaKKKAEpaSigApaSigAopaSgAoopaAEopaKAEooooAWikpaAP/1fpuiilqCxKKKKACiiigAooooAKWkooAKKKKAClpKKAFopKWgApKKKAFpKKWgBKKWkoAKKKKACiiigAooooAKWkooAKKKKACiiigAooooAKKKKACiiloAKKKSgAoopaAEopaKAEpaSloAKKKSgBaSlpKACiiigBaKKKACiiigBKKKKAFopKWgApKWigBKKKKACiiigApaKKAEooooAWiikoAWikooAKKWigBKKKKAP/W+nKSloqCxKKWigAooooAKKSigAooooAKKKKACilooASilpKACilooAKSlpKACiiigAooooAKKKKAFpKKWgBKKWkoAWkopaAEoopaAEooooAKWkpaAEooooAKKWigBKKWkoAKKKKAClopKACilpKACilpKACilpKACiiloASlpKKACilpKAClpKKAFpKKKACloooASlpKKAFpKWkoAKKKKAFpKKKAClpKKAFpKKKACiiigD//2Q==" alt="Stay Style Logo" class="stay-logo-img">
+        <div>
+          <div class="brand-title serif">Stay Style</div>
+          <div class="brand-sub">Alfaiataria Feminina & Linho Puro • Showroom Santo André</div>
         </div>
       </div>
-      
-      <div class="status-badge-header">
-        <span class="status-dot-pulse"></span>
+      <div class="status-badge">
         <span>Ativação Oficial: 21 de Setembro</span>
       </div>
     </div>
   </header>
 
-  <!-- Main Container -->
+  <!-- Container Principal -->
   <div class="container">
 
     <!-- Hero Section -->
     <div class="hero-wrap">
-      <div class="meta-partner-tag">
-        <!-- Official Meta Ads Manager Icon -->
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-9 14H7v-7h3v7zm4 0h-3V7h3v10zm4 0h-3v-4h3v4z"/>
-        </svg>
+      <div class="hero-tag">
         <span>Meta Ads Business Manager</span>
       </div>
-
-      <h1 class="serif">Fluxograma Oficial de Tráfego:<br><span>Campanhas, Conjuntos, Criativos e Vendas</span></h1>
+      <h1 class="serif">Fluxograma Estratégico de Tráfego:<br><span>Da Atração Regional às Vendas</span></h1>
       <p>
-        Mapeamento técnico da estrutura de anúncios no Instagram e Facebook com orçamento inicial de <strong>R$ 500,00 / semana (~R$ 71,40 / dia)</strong>, conectando o tráfego pago ao atendimento no WhatsApp e à loja virtual Nuvemshop.
+        Estrutura desenhada para o orçamento inicial de <strong>R$ 500,00 / semana (~R$ 71,40 / dia)</strong>, eliminando o desperdício de verba da agência anterior e conduzindo clientes qualificadas de Santo André e Grande ABC diretamente para o WhatsApp e para a loja virtual.
       </p>
 
-      <!-- 4 Key Metrics Deck -->
-      <div class="metrics-bar-grid">
-        <div class="metric-pill-card">
-          <div class="metric-top-label">Verba por Semana</div>
-          <div class="metric-main-value">R$ 500,00</div>
-          <div class="metric-sub-detail">~R$ 71,40 / dia</div>
+      <!-- 4 Métricas Chave -->
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-label">Verba por Semana</div>
+          <div class="metric-val">R$ 500,00</div>
+          <div class="metric-sub">~R$ 71,40 / dia</div>
         </div>
-        <div class="metric-pill-card">
-          <div class="metric-top-label">Alívio de Caixa</div>
-          <div class="metric-main-value">R$ 2.000,00</div>
-          <div class="metric-sub-detail">Economia mensal direta</div>
+        <div class="metric-card">
+          <div class="metric-label">Economia Mensal</div>
+          <div class="metric-val">R$ 2.000,00</div>
+          <div class="metric-sub">Alívio direto de caixa</div>
         </div>
-        <div class="metric-pill-card">
-          <div class="metric-top-label">Meta de ROAS</div>
-          <div class="metric-main-value">3.0x a 3.5x</div>
-          <div class="metric-sub-detail">Retorno sobre Anúncio</div>
+        <div class="metric-card">
+          <div class="metric-label">Meta de Vendas Mês 1</div>
+          <div class="metric-val">20 a 30</div>
+          <div class="metric-sub">vs. 4 vendas da agência antiga</div>
         </div>
-        <div class="metric-pill-card">
-          <div class="metric-top-label">Formato Campeão</div>
-          <div class="metric-main-value">Reels 9:16</div>
-          <div class="metric-sub-detail">Provador com Caimento</div>
+        <div class="metric-card">
+          <div class="metric-label">Formato Campeão</div>
+          <div class="metric-val">Reels 9:16</div>
+          <div class="metric-sub">Provador com Caimento Real</div>
         </div>
       </div>
     </div>
-
-    
-      <!-- BARRA DE CONTROLE INTERATIVO: FILTRO POR FOCO & SIMULADOR DE VERBA -->
-      <div class="control-toolbar reveal-item">
-        <div class="filter-tabs">
-          <button class="filter-tab active" data-filter="all">
-            <span>✨</span> Visão Geral Completa
-          </button>
-          <button class="filter-tab" data-filter="c1">
-            <span>🎯</span> Motor Regional (Santo André)
-          </button>
-          <button class="filter-tab" data-filter="c2">
-            <span>👑</span> Grupo VIP Exclusivo
-          </button>
-          <button class="filter-tab" data-filter="c3">
-            <span>🔄</span> Máquina de Remarketing
-          </button>
-        </div>
-
-        <div class="budget-slider-box">
-          <label>Simular Verba:</label>
-          <div class="budget-pill-select">
-            <button class="btn-budget-val active" data-budget="500">R$ 500/sem</button>
-            <button class="btn-budget-val" data-budget="750">R$ 750/sem</button>
-            <button class="btn-budget-val" data-budget="1000">R$ 1.000/sem</button>
-          </div>
-        </div>
-      </div>
 
     <!-- FLUXOGRAMA MASTER -->
-    <div class="flowchart-engine">
+    <div class="flowchart-wrap">
 
-      <!-- NÍVEL 0: ROOT META ADS BUSINESS SUITE -->
-      <div class="meta-root-box">
-        <div class="meta-logo-header">
-          <!-- Official Meta Infinity Vector -->
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="#0081FB">
+      <!-- NÍVEL 0: CENTRAL META ADS -->
+      <div class="meta-central-card">
+        <div class="meta-central-tag">
+          <!-- Meta SVG Official -->
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#0081FB">
             <path d="M6.915 4.03c-1.968 0-3.683 1.28-4.871 3.113C.704 9.208 0 11.883 0 14.449c0 .706.07 1.369.21 1.973a6.624 6.624 0 0 0 .265.86 5.297 5.297 0 0 0 .371.761c.696 1.159 1.818 1.927 3.593 1.927 1.497 0 2.633-.671 3.965-2.444.76-1.012 1.144-1.626 2.663-4.32l.756-1.339.186-.325c.061.1.121.196.183.3l2.152 3.595c.724 1.21 1.665 2.556 2.47 3.314 1.046.987 1.992 1.22 3.06 1.22 1.075 0 1.876-.355 2.455-.843a3.743 3.743 0 0 0 .81-.973c.542-.939.861-2.127.861-3.745 0-2.72-.681-5.357-2.084-7.45-1.282-1.912-2.957-2.93-4.716-2.93-1.047 0-2.088.467-3.053 1.308-.652.57-1.257 1.29-1.82 2.05-.69-.875-1.335-1.547-1.958-2.056-1.182-.966-2.315-1.303-3.454-1.303zm10.16 2.053c1.147 0 2.188.758 2.992 1.999 1.132 1.748 1.647 4.195 1.647 6.4 0 1.548-.368 2.9-1.839 2.9-.58 0-1.027-.23-1.664-1.004-.496-.601-1.343-1.878-2.832-4.358l-.617-1.028a44.908 44.908 0 0 0-1.255-1.98c.07-.109.141-.224.211-.327 1.12-1.667 2.118-2.602 3.358-2.602zm-10.201.553c1.265 0 2.058.791 2.675 1.446.307.327.737.871 1.234 1.579l-1.02 1.566c-.757 1.163-1.882 3.017-2.837 4.338-1.191 1.649-1.81 1.817-2.486 1.817-.524 0-1.038-.237-1.383-.794-.263-.426-.464-1.13-.464-2.046 0-2.221.63-4.535 1.66-6.088.454-.687.964-1.226 1.533-1.533a2.264 2.264 0 0 1 1.088-.285z"/>
           </svg>
-          <span>Meta Ads Manager • Conta Comercial Stay Style</span>
+          <span>Central de Mídia Meta Ads</span>
         </div>
-
-        <h2 class="meta-root-title serif">Central de Comando de Mídia</h2>
-        <div class="meta-root-sub">Gestor Responsável: João Pedro Schmitz • Cliente: Evelin Ramalho</div>
-
-        <div class="meta-budget-pill">
-          <span>Orçamento Global: R$ 500,00 / semana</span>
-          <span>•</span>
-          <span>Pacing Diário: ~R$ 71,40 / dia</span>
-        </div>
-
-        <p class="meta-root-desc">
-          O investimento é dividido estrategicamente em 3 campanhas paralelas de alta performance para cobrir o público regional do Grande ABC, escalar a nova loja Nuvemshop e resgatar visitantes com remarketing inteligente.
+        <h2 class="meta-central-title serif">Distribuição Estratégica da Verba</h2>
+        <div class="meta-budget-pill">R$ 500,00 / semana • ~R$ 71,40 / dia</div>
+        <p class="meta-central-desc">
+          A verba é alocada em 3 frentes complementares: <strong>50%</strong> para atrair clientes locais em Santo André/ABC, <strong>30%</strong> para formar o Grupo VIP de compradoras e <strong>20%</strong> para recuperar quem já demonstrou interesse.
         </p>
       </div>
 
-      <!-- Tronco Conector Vertical -->
-      <div class="trunk-connector"></div>
+      <!-- Conector Tronco -->
+      <div class="flow-trunk"></div>
 
-      <!-- GRID DAS 3 COLUNAS DO FLUXOGRAMA -->
-      <div class="flow-columns-grid">
+      <!-- AS 3 COLUNAS DO FLUXOGRAMA -->
+      <div class="columns-grid">
 
-        <!-- ======================================================= -->
+        <!-- ========================================== -->
         <!-- COLUNA 1: MOTOR REGIONAL (SANTO ANDRÉ & ABC) -->
-        <!-- ======================================================= -->
-        <div class="flow-column">
-
-          <!-- 1. CAMPANHA 1 -->
-          <div class="stage-card card-c1" data-tilt>
-            <div class="card-glare"></div>
-            <div class="radar-container" title="Radar Regional Ativo: Santo André e Grande ABC">
-              <div class="radar-wave"></div>
-              <div class="radar-wave"></div>
-              <div class="radar-dot"></div>
+        <!-- ========================================== -->
+        <div class="col-stack">
+          
+          <!-- Campanha 1 -->
+          <div class="flow-card">
+            <div class="card-top-row">
+              <span class="step-tag tag-c1">1. CAMPANHA</span>
+              <span class="budget-tag">R$ 35,00/dia (50%)</span>
             </div>
-            <div class="color-strip"></div>
-            <div class="stage-card-header">
-              <span class="stage-tag tag-style-c1">
-                <!-- Meta Campaign Folder Official Icon -->
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 12H4V8h16v10z"/>
-                </svg>
-                1. CAMPANHA
-              </span>
-              <span class="stage-budget-badge">R$ 35,00/dia (50%)</span>
-            </div>
-
-            <div class="stage-title-row">
-              <div class="official-icon-box" style="border-color:#FCD6C9;">
-                <!-- Target Megaphone Icon -->
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D94819" stroke-width="2">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-              </div>
-              <h3 class="stage-title-text serif">Regional ABC • Ponte Link in Bio</h3>
-            </div>
-
-            <ul class="tech-specs-list">
-              <li>
-                <svg class="tech-ico" viewBox="0 0 24 24" fill="none" stroke="#D94819" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                <span><strong>Objetivo Meta:</strong> Tráfego com Visualização da Página de Destino</span>
-              </li>
-              <li>
-                <svg class="tech-ico" viewBox="0 0 24 24" fill="none" stroke="#D94819" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                <span><strong>Orçamento Semanal:</strong> R$ 245,00 (R$ 35,00/dia • 50% da verba)</span>
-              </li>
-              <li>
-                <svg class="tech-ico" viewBox="0 0 24 24" fill="none" stroke="#D94819" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-                <span><strong>Estratégia Anti-Desperdício:</strong> Ponte via Link in Bio (CPC R$ 0,50 a R$ 0,90)</span>
-              </li>
+            <h3 class="card-title serif">Regional ABC • Ponte Link in Bio</h3>
+            <ul class="card-specs">
+              <li><strong>Objetivo:</strong> Tráfego qualificado com Landing Page Views</li>
+              <li><strong>Orçamento:</strong> R$ 245,00 / semana (R$ 35,00/dia)</li>
+              <li><strong>Foco:</strong> Eliminar o clique de curiosos desqualificados</li>
             </ul>
-
-            <!-- Explicação Técnica Embaixo do Bloco -->
-            <div class="stage-explanation-box exp-c1">
-              <span class="exp-header">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-                Por que a ponte pelo Link in Bio é mais lucrativa?
-              </span>
-              Em vez de pagar R$ 15 a R$ 20 por conversa direta no WhatsApp com curiosos desqualificados, direcionamos o tráfego regional para o <strong>Link na Bio da Stay Style</strong> (custo de R$ 0,50 a R$ 0,90 por clique). A mulher consome a página, vê o showroom de Santo André e escolhe chamar no WhatsApp ou comprar na loja virtual, gerando leads com intenção real.
+            <div class="rationale-box c1">
+              <strong>Por que a Ponte pelo Link na Bio funciona:</strong> Em vez de pagar R$ 15–20 por conversa direta de curioso no WhatsApp, levamos o público para a bio (<strong>staystyle.jpstudio.tech</strong>) por R$ 0,50 a R$ 0,90. Quem chama no WhatsApp já viu as peças, o showroom e tem real intenção de compra.
             </div>
           </div>
 
-          <!-- Seta Conectora -->
-          <div class="arrow-line-down c1"></div>
+          <div class="arrow-down c1"></div>
 
-          <!-- 2. CONJUNTO DE ANÚNCIOS 1 -->
-          <div class="stage-card card-c1">
-            <div class="color-strip"></div>
-            <div class="stage-card-header">
-              <span class="stage-tag tag-style-c1">
-                <!-- Meta Ad Set 4 Squares Official Icon -->
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M3 3h7v7H3zm11 0h7v7h-7zm-11 11h7v7H3zm11 0h7v7h-7z"/>
-                </svg>
-                2. CONJUNTO DE ANÚNCIOS
-              </span>
-              <span class="stage-budget-badge">Público Qualificado</span>
+          <!-- Conjunto 1 -->
+          <div class="flow-card">
+            <div class="card-top-row">
+              <span class="step-tag tag-c1">2. CONJUNTO DE ANÚNCIOS</span>
+              <span class="budget-tag">Público Qualificado</span>
             </div>
-
-            <div class="stage-title-row">
-              <div class="official-icon-box" style="border-color:#FCD6C9;">
-                <!-- Map Pin Radar Icon -->
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D94819" stroke-width="2">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
-                </svg>
-              </div>
-              <h3 class="stage-title-text serif">Grande ABC + Zonas Nobres SP</h3>
-            </div>
-
-            <ul class="tech-specs-list">
-              <li>
-                <svg class="tech-ico" viewBox="0 0 24 24" fill="none" stroke="#D94819" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-                <span><strong>Raio Geográfico:</strong> Santo André + 20km (SBC, SCS, Mauá)</span>
-              </li>
-              <li>
-                <svg class="tech-ico" viewBox="0 0 24 24" fill="none" stroke="#D94819" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-                <span><strong>Pinos Nobres Capital:</strong> Mooca, Tatuapé, Anália Franco, Vila Mariana</span>
-              </li>
-              <li>
-                <svg class="tech-ico" viewBox="0 0 24 24" fill="none" stroke="#D94819" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-                <span><strong>Idade:</strong> Mulheres de 28 a 56 anos com poder de compra</span>
-              </li>
-              <li>
-                <svg class="tech-ico" viewBox="0 0 24 24" fill="none" stroke="#D94819" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                <span><strong>Interesses:</strong> Alfaiataria, Linho, Consultoria de Imagem, Zara</span>
-              </li>
+            <h3 class="card-title serif">Santo André + Zonas Nobres ABC</h3>
+            <ul class="card-specs">
+              <li><strong>Raio:</strong> Santo André + 20km (SBC, SCS, Mauá) e Zonas Nobres SP</li>
+              <li><strong>Idade:</strong> Mulheres de 28 a 56 anos com poder de compra</li>
+              <li><strong>Interesses:</strong> Alfaiataria, Linho Puro, Consultoria de Imagem, Moda Fina</li>
             </ul>
-
-            <!-- Explicação Técnica Embaixo do Bloco -->
-            <div class="stage-explanation-box exp-c1">
-              <span class="exp-header">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-                Como funciona a segmentação?
-              </span>
-              Em vez de anunciar para cidades distantes com frete abusivo, filtramos mulheres com afinidade por alfaiataria em bairros consolidados, garantindo cliques de alto valor.
+            <div class="rationale-box c1">
+              <strong>Estratégia Local:</strong> Focamos em mulheres próximas ao showroom para gerar desejo imediato de provador físico ou entrega rápida no Grande ABC.
             </div>
           </div>
 
-          <!-- Seta Conectora -->
-          <div class="arrow-line-down c1"></div>
+          <div class="arrow-down c1"></div>
 
-          <!-- 3. CRIATIVOS 1 (SPLIT DE 2 ANÚNCIOS) -->
-          <div class="creatives-row-grid">
-
-            <!-- Criativo 1A -->
-            <div class="creative-box-item">
-              <div>
-                <div class="c-badge-top">
-                  <span class="c-format-tag">
-                    <!-- Instagram Official Icon -->
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="#E1306C"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                    Reels 9:16
-                  </span>
-                  <span class="c-time-tag">35 seg</span>
-                </div>
-                <div class="c-heading">
-                  Roteiro 1: Modelagem
-                </div>
-                <div class="c-hook-quote">
-                  "Mulher, se você acha que calça de alfaiataria tem que apertar na cintura..."
-                </div>
-              </div>
-              <p class="c-desc-text">
-                Evelin demonstra o cós anatômico, tecido de toque suave e caimento sem marcar nada.
-              </p>
+          <!-- Criativo 1A (Fotorrealista) -->
+          <div class="creative-visual-card">
+            <div class="creative-img-wrap">
+              <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=750&q=85" alt="Provador Alfaiataria Feminina Stay Style" class="creative-img" loading="lazy">
+              <span class="reels-badge-overlay">🎥 Reels 9:16 • Provador</span>
+              <span class="reels-format-pill">AD 1A</span>
             </div>
-
-            <!-- Criativo 1B -->
-            <div class="creative-box-item">
-              <div>
-                <div class="c-badge-top">
-                  <span class="c-format-tag">
-                    <!-- Instagram Official Icon -->
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="#E1306C"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                    Reels 9:16
-                  </span>
-                  <span class="c-time-tag">45 seg</span>
-                </div>
-                <div class="c-heading">
-                  Roteiro 2: 1 Peça 3 Looks
-                </div>
-                <div class="c-hook-quote">
-                  "Como transformar uma única peça em 3 looks da sua semana?"
-                </div>
+            <div class="creative-content">
+              <h4 class="creative-title serif">"O Caimento da Alfaiataria Feminina"</h4>
+              <div class="script-summary">
+                <div class="script-step"><strong>Gancho (0-3s):</strong> "Cansada de comprar alfaiataria que amassa parecendo papel e esquenta no corpo?"</div>
+                <div class="script-step"><strong>Corpo (4-18s):</strong> Evelin no provador demonstrando o forro respirável, ombreira estruturada e corte que afina a cintura.</div>
+                <div class="script-step"><strong>CTA (19-25s):</strong> "Clique no link da bio e venha provar no nosso showroom em Santo André!"</div>
               </div>
-              <p class="c-desc-text">
-                Transição rápida: Trabalho (com scarpin), Casual (tênis branco) e Noite (com acessórios).
-              </p>
             </div>
-
           </div>
 
-          <!-- Seta Conectora -->
-          <div class="arrow-line-down c1"></div>
-
-          <!-- 4. DESTINO 1 -->
-          <div class="stage-card destination-stage-card" style="background:#FBF7EE; border: 1.5px solid #E5DDD5;">
-            <div class="stage-card-header">
-              <span class="stage-tag" style="background:#F1EAE2; color:#9E644F;">4. DESTINO ESTRATÉGICO</span>
-              <span class="stage-budget-badge" style="color:#047857;">Filtro de Alta Conversão</span>
+          <!-- Criativo 1B (Fotorrealista) -->
+          <div class="creative-visual-card">
+            <div class="creative-img-wrap">
+              <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=750&q=85" alt="1 Peça 3 Looks Stay Style" class="creative-img" loading="lazy">
+              <span class="reels-badge-overlay">👗 Reels 9:16 • Versatilidade</span>
+              <span class="reels-format-pill">AD 1B</span>
             </div>
-
-            <div class="stage-title-row">
-              <div class="official-icon-box" style="background:#9E644F; border-color:#9E644F;">
-                <!-- Link in Bio Hub Icon -->
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2">
-                  <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
-                  <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
-                </svg>
+            <div class="creative-content">
+              <h4 class="creative-title serif">"1 Peça, 3 Looks Diferentes"</h4>
+              <div class="script-summary">
+                <div class="script-step"><strong>Gancho (0-3s):</strong> "Três ocasiões completamente diferentes com a mesma peça-chave da Stay Style."</div>
+                <div class="script-step"><strong>Corpo (4-20s):</strong> Look 1 Trabalho (pantalona + salto), Look 2 Almoço (jeans + mocassim), Look 3 Noite (blazer nos ombros).</div>
+                <div class="script-step"><strong>CTA (21-28s):</strong> "Descubra a coleção cápsula no link da nossa bio."</div>
               </div>
-              <h3 class="stage-title-text serif">Link in Bio Stay Style + WhatsApp</h3>
-            </div>
-
-            <ul class="tech-specs-list">
-              <li>
-                <svg class="tech-ico" viewBox="0 0 24 24" fill="none" stroke="#9E644F" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                <span><strong>Página de Entrada:</strong> Link in Bio oficial com foto da Evelin, logo e botões</span>
-              </li>
-              <li>
-                <svg class="tech-ico" viewBox="0 0 24 24" fill="none" stroke="#9E644F" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-                <span><strong>Encaminhamento WhatsApp:</strong> Botão direto com mensagem de styling pré-preenchida</span>
-              </li>
-              <li>
-                <svg class="tech-ico" viewBox="0 0 24 24" fill="none" stroke="#9E644F" stroke-width="2"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7z"/></svg>
-                <span><strong>Visita ao Showroom:</strong> Botão do Google Maps para Santo André e entrega motoboy</span>
-              </li>
-            </ul>
-
-            <div class="stage-explanation-box" style="background:#FFFFFF; border-left: 4px solid #9E644F; color:#4A3E39;">
-              <span class="exp-header" style="color:#9E644F;">Por que essa rota converte muito mais?</span>
-              A mulher aterrissa em um ambiente que respira sofisticação (armário inteligente, garantia de 1ª troca grátis). Quem clica para falar no WhatsApp já está pré-qualificada e decidida a comprar.
             </div>
           </div>
 
         </div>
 
-
-        <!-- ======================================================= -->
-        <!-- COLUNA 2: EXPANSÃO E-COMMERCE (NUVEMSHOP) -->
-        <!-- ======================================================= -->
-        <div class="flow-column">
-
-          <!-- 1. CAMPANHA 2 -->
-          <div class="stage-card card-c2" data-tilt>
-            <div class="card-glare"></div>
-            <div class="shimmer-luxury-wrap"></div>
-            <div class="color-strip"></div>
-            <div class="stage-card-header">
-              <span class="stage-tag tag-style-c2">
-                <!-- Meta Campaign Folder Official Icon -->
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 12H4V8h16v10z"/>
-                </svg>
-                1. CAMPANHA
-              </span>
-              <span class="stage-budget-badge">R$ 25,00/dia (35%)</span>
+        <!-- ========================================== -->
+        <!-- COLUNA 2: GRUPO VIP & CONVERSÕES -->
+        <!-- ========================================== -->
+        <div class="col-stack">
+          
+          <!-- Campanha 2 -->
+          <div class="flow-card">
+            <div class="card-top-row">
+              <span class="step-tag tag-c2">1. CAMPANHA</span>
+              <span class="budget-tag">R$ 21,00/dia (30%)</span>
             </div>
-
-            <div class="stage-title-row">
-              <div class="official-icon-box" style="border-color:#C6F0DF;">
-                <!-- Shopping Bag Icon -->
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#047857" stroke-width="2">
-                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/>
-                </svg>
-              </div>
-              <h3 class="stage-title-text serif">E-commerce • Nuvemshop</h3>
-            </div>
-
-            <ul class="tech-specs-list">
-              <li>
-                <svg class="tech-ico" viewBox="0 0 24 24" fill="none" stroke="#047857" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                <span><strong>Objetivo Meta:</strong> Conversões no Site (Purchase / Pixel)</span>
-              </li>
-              <li>
-                <svg class="tech-ico" viewBox="0 0 24 24" fill="none" stroke="#047857" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                <span><strong>Orçamento Semanal:</strong> R$ 175,00 (35% da verba total)</span>
-              </li>
-              <li>
-                <svg class="tech-ico" viewBox="0 0 24 24" fill="none" stroke="#047857" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                <span><strong>Rastreamento:</strong> Pixel Meta + API de Conversões Nuvemshop</span>
-              </li>
+            <h3 class="card-title serif">Captação Grupo VIP WhatsApp</h3>
+            <ul class="card-specs">
+              <li><strong>Objetivo:</strong> Entradas no Grupo VIP e Leads Diretos</li>
+              <li><strong>Orçamento:</strong> R$ 147,00 / semana (R$ 21,00/dia)</li>
+              <li><strong>Foco:</strong> Construir base própria de clientes fiéis</li>
             </ul>
-
-            <!-- Explicação Técnica Embaixo do Bloco -->
-            <div class="stage-explanation-box exp-c2">
-              <span class="exp-header">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-                Por que este bloco foi criado?
-              </span>
-              Ele destrava as vendas autônomas. A cliente acessa a loja virtual montada na Nuvemshop, seleciona o tamanho, calcula o frete e realiza o pagamento no Pix ou cartão sem depender do atendimento humano.
+            <div class="rationale-box c2">
+              <strong>Ativo Perpétuo:</strong> O Grupo VIP no WhatsApp é o canal mais lucrativo da Stay Style. As clientes lá dentro compram lançamentos sem você gastar nem R$ 1 a mais em anúncios.
             </div>
           </div>
 
-          <!-- Seta Conectora -->
-          <div class="arrow-line-down c2"></div>
+          <div class="arrow-down c2"></div>
 
-          <!-- 2. CONJUNTO DE ANÚNCIOS 2 -->
-          <div class="stage-card card-c2">
-            <div class="color-strip"></div>
-            <div class="stage-card-header">
-              <span class="stage-tag tag-style-c2">
-                <!-- Meta Ad Set 4 Squares Official Icon -->
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M3 3h7v7H3zm11 0h7v7h-7zm-11 11h7v7H3zm11 0h7v7h-7z"/>
-                </svg>
-                2. CONJUNTO DE ANÚNCIOS
-              </span>
-              <span class="stage-budget-badge">Escala Estadual</span>
+          <!-- Conjunto 2 -->
+          <div class="flow-card">
+            <div class="card-top-row">
+              <span class="step-tag tag-c2">2. CONJUNTO DE ANÚNCIOS</span>
+              <span class="budget-tag">Público Engajado</span>
             </div>
-
-            <div class="stage-title-row">
-              <div class="official-icon-box" style="border-color:#C6F0DF;">
-                <!-- Globe Icon -->
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#047857" stroke-width="2">
-                  <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-                </svg>
-              </div>
-              <h3 class="stage-title-text serif">Estado de SP + Capitais Sul/SE</h3>
-            </div>
-
-            <ul class="tech-specs-list">
-              <li>
-                <svg class="tech-ico" viewBox="0 0 24 24" fill="none" stroke="#047857" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>
-                <span><strong>Cidades de Alta Renda SP:</strong> Campinas, Sorocaba, Santos, Ribeirão Preto</span>
-              </li>
-              <li>
-                <svg class="tech-ico" viewBox="0 0 24 24" fill="none" stroke="#047857" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                <span><strong>Capitais de Conexão Rápida:</strong> Curitiba, Rio de Janeiro, Belo Horizonte</span>
-              </li>
-              <li>
-                <svg class="tech-ico" viewBox="0 0 24 24" fill="none" stroke="#047857" stroke-width="2"><circle cx="12" cy="7" r="4"/><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/></svg>
-                <span><strong>Idade:</strong> Mulheres de 30 a 55 anos habituadas ao e-commerce</span>
-              </li>
-              <li>
-                <svg class="tech-ico" viewBox="0 0 24 24" fill="none" stroke="#047857" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
-                <span><strong>Formato de Segmentação:</strong> Aberta (Broad) filtrada pelo criativo</span>
-              </li>
+            <h3 class="card-title serif">Mulheres que Amam Exclusividade</h3>
+            <ul class="card-specs">
+              <li><strong>Segmentação:</strong> Mulheres que seguem perfis de moda e marcas premium</li>
+              <li><strong>Gatilhos:</strong> Acesso antecipado a peças limitadas e frete grátis</li>
+              <li><strong>Posicionamento:</strong> Stories e Reels de alto impacto</li>
             </ul>
-
-            <!-- Explicação Técnica Embaixo do Bloco -->
-            <div class="stage-explanation-box exp-c2">
-              <span class="exp-header">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-                Como funciona a segmentação?
-              </span>
-              O algoritmo do Meta identifica mulheres que compram roupas em lojas virtuais de moda nessas cidades selecionadas onde os Correios entregam com baixo custo e em poucos dias.
+            <div class="rationale-box c2">
+              <strong>Sensação de Pertencimento:</strong> A cliente entra não para ver spam, mas para ter atendimento de concierge e privilégios exclusivos.
             </div>
           </div>
 
-          <!-- Seta Conectora -->
-          <div class="arrow-line-down c2"></div>
+          <div class="arrow-down c2"></div>
 
-          <!-- 3. CRIATIVOS 2 (SPLIT DE 2 ANÚNCIOS) -->
-          <div class="creatives-row-grid">
-
-            <!-- Criativo 2A -->
-            <div class="creative-box-item">
-              <div>
-                <div class="c-badge-top">
-                  <span class="c-format-tag">
-                    <!-- Instagram Official Icon -->
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="#E1306C"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                    Reels 9:16
-                  </span>
-                  <span class="c-time-tag">40 seg</span>
-                </div>
-                <div class="c-heading">
-                  Roteiro 3: Consultora
-                </div>
-                <div class="c-hook-quote">
-                  "O maior segredo para parecer elegante não é gastar fortuna em grife..."
-                </div>
+          <!-- Criativo 2A (Fotorrealista) -->
+          <div class="creative-visual-card">
+            <div class="creative-img-wrap">
+              <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=750&q=85" alt="Unboxing e Convite VIP Stay Style" class="creative-img" loading="lazy">
+              <span class="reels-badge-overlay">🎁 Stories / Reels • Convite VIP</span>
+              <span class="reels-format-pill">AD 2A</span>
+            </div>
+            <div class="creative-content">
+              <h4 class="creative-title serif">"Convite Oficial: Clube VIP Stay Style"</h4>
+              <div class="script-summary">
+                <div class="script-step"><strong>Mensagem Central:</strong> "Nossas coleções de linho puro são lançadas em lotes limitados. As clientes do nosso Grupo VIP têm 24 horas de exclusividade para escolher os tamanhos antes de todo mundo."</div>
+                <div class="script-step"><strong>CTA Direto:</strong> "Toque no botão e entre no grupo silencioso agora mesmo!"</div>
               </div>
-              <p class="c-desc-text">
-                Autoridade pura: ensina como o corte reto de alfaiataria alonga a silhueta e valoriza a mulher.
-              </p>
-            </div>
-
-            <!-- Criativo 2B -->
-            <div class="creative-box-item">
-              <div>
-                <div class="c-badge-top">
-                  <span class="c-format-tag">
-                    <!-- Meta Ad Multiple Photos -->
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="#0081FB"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12z"/></svg>
-                    Carrossel 5x
-                  </span>
-                  <span class="c-time-tag">Looks No Corpo</span>
-                </div>
-                <div class="c-heading">
-                  Coleção Linho & Alfaiataria
-                </div>
-                <div class="c-hook-quote">
-                  Fotos de alta resolução mostrando a terceira peça + 1ª Troca Grátis.
-                </div>
-              </div>
-              <p class="c-desc-text">
-                A cliente visualiza diferentes cores e modelos, clica no botão "Comprar Agora" e vai direto pro checkout.
-              </p>
-            </div>
-
-          </div>
-
-          <!-- Seta Conectora -->
-          <div class="arrow-line-down c2"></div>
-
-          <!-- 4. DESTINO 2 -->
-          <div class="stage-card destination-stage-card" style="background:#F0F4FE; border: 1.5px solid #C7D2FE;">
-            <div class="stage-card-header">
-              <span class="stage-tag" style="background:#E0E7FF; color:#2D3192;">4. DESTINO FINAL</span>
-              <span class="stage-budget-badge" style="color:#2D3192;">Loja Nuvemshop</span>
-            </div>
-
-            <div class="stage-title-row">
-              <div class="official-icon-box" style="background:#2D3192; border-color:#2D3192;">
-                <!-- Official Nuvemshop / E-commerce Monitor Icon -->
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="#FFFFFF">
-                  <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8h16v10z"/>
-                </svg>
-              </div>
-              <h3 class="stage-title-text serif">Loja Nuvemshop + Link in Bio</h3>
-            </div>
-
-            <ul class="tech-specs-list">
-              <li>
-                <svg class="tech-ico" viewBox="0 0 24 24" fill="none" stroke="#2D3192" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
-                <span><strong>Página de Categoria:</strong> Vitrine de Linho e Peças Atemporais</span>
-              </li>
-              <li>
-                <svg class="tech-ico" viewBox="0 0 24 24" fill="none" stroke="#2D3192" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                <span><strong>Garantia Estampada:</strong> <em>"Primeira troca grátis por nossa conta"</em></span>
-              </li>
-              <li>
-                <svg class="tech-ico" viewBox="0 0 24 24" fill="none" stroke="#2D3192" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
-                <span><strong>Pagamento Direto:</strong> Pix com desconto ou parcelamento sem juros</span>
-              </li>
-            </ul>
-
-            <div class="stage-explanation-box exp-shop">
-              <span class="exp-header">Como ocorre a conversão final?</span>
-              A cliente navega pelo celular com velocidade máxima, confere a tabela de medidas orientada por você e conclui a compra de forma 100% automatizada.
             </div>
           </div>
 
         </div>
 
-
-        <!-- ======================================================= -->
-        <!-- COLUNA 3: REMARKETING (CERCO INTELIGENTE DE QUENTES) -->
-        <!-- ======================================================= -->
-        <div class="flow-column">
-
-          <!-- 1. CAMPANHA 3 -->
-          <div class="stage-card card-c3" data-tilt>
-            <div class="card-glare"></div>
-            <div class="color-strip"></div>
-            <div class="stage-card-header">
-              <span class="stage-tag tag-style-c3">
-                <!-- Meta Campaign Folder Official Icon -->
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 12H4V8h16v10z"/>
-                </svg>
-                1. CAMPANHA
-              </span>
-              <span class="stage-budget-badge">R$ 11,40/dia (15%)</span>
+        <!-- ========================================== -->
+        <!-- COLUNA 3: REMARKETING & RESGATE -->
+        <!-- ========================================== -->
+        <div class="col-stack">
+          
+          <!-- Campanha 3 -->
+          <div class="flow-card">
+            <div class="card-top-row">
+              <span class="step-tag tag-c3">1. CAMPANHA</span>
+              <span class="budget-tag">R$ 14,00/dia (20%)</span>
             </div>
-
-            <div class="stage-title-row">
-              <div class="official-icon-box" style="border-color:#E2D5FC;">
-                <!-- Retargeting Arrow Icon -->
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6D28D9" stroke-width="2">
-                  <polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>
-                </svg>
-              </div>
-              <h3 class="stage-title-text serif">Remarketing • Cerco Quente</h3>
-            </div>
-
-            <ul class="tech-specs-list">
-              <li>
-                <svg class="tech-ico" viewBox="0 0 24 24" fill="none" stroke="#6D28D9" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                <span><strong>Objetivo Meta:</strong> Conversões e Fechamento de Vendas</span>
-              </li>
-              <li>
-                <svg class="tech-ico" viewBox="0 0 24 24" fill="none" stroke="#6D28D9" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                <span><strong>Orçamento Semanal:</strong> R$ 80,00 (15% da verba total)</span>
-              </li>
-              <li>
-                <svg class="tech-ico" viewBox="0 0 24 24" fill="none" stroke="#6D28D9" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                <span><strong>Retorno Esperado:</strong> Campanha com o maior ROAS da conta</span>
-              </li>
+            <h3 class="card-title serif">Remarketing • Resgate de Visitantes</h3>
+            <ul class="card-specs">
+              <li><strong>Objetivo:</strong> Fechamento de Vendas e Quebra de Dúvidas</li>
+              <li><strong>Orçamento:</strong> R$ 98,00 / semana (R$ 14,00/dia)</li>
+              <li><strong>Foco:</strong> Nunca mais perder quem já visitou a marca</li>
             </ul>
-
-            <!-- Explicação Técnica Embaixo do Bloco -->
-            <div class="stage-explanation-box exp-c3">
-              <span class="exp-header">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-                Por que este bloco foi criado?
-              </span>
-              Mulheres raramente compram roupa no primeiro clique. Esse bloco "persegue" com sofisticação apenas as mulheres que já namoraram os looks da Stay Style, garantindo que elas não esqueçam de fechar a compra.
+            <div class="rationale-box c3">
+              <strong>Maior Retorno do Funil (ROAS 4x+):</strong> O remarketing fala com quem já conhece a Stay Style mas hesitou por medo do tamanho ou da modelagem.
             </div>
           </div>
 
-          <!-- Seta Conectora -->
-          <div class="arrow-line-down c3"></div>
+          <div class="arrow-down c3"></div>
 
-          <!-- 2. CONJUNTO DE ANÚNCIOS 3 -->
-          <div class="stage-card card-c3">
-            <div class="color-strip"></div>
-            <div class="stage-card-header">
-              <span class="stage-tag tag-style-c3">
-                <!-- Meta Ad Set 4 Squares Official Icon -->
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M3 3h7v7H3zm11 0h7v7h-7zm-11 11h7v7H3zm11 0h7v7h-7z"/>
-                </svg>
-                2. CONJUNTO DE ANÚNCIOS
-              </span>
-              <span class="stage-budget-badge">Público Morno / Quente</span>
+          <!-- Conjunto 3 -->
+          <div class="flow-card">
+            <div class="card-top-row">
+              <span class="step-tag tag-c3">2. CONJUNTO DE ANÚNCIOS</span>
+              <span class="budget-tag">Público Quente</span>
             </div>
-
-            <div class="stage-title-row">
-              <div class="official-icon-box" style="border-color:#E2D5FC;">
-                <!-- Audience Custom Icon -->
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6D28D9" stroke-width="2">
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                </svg>
-              </div>
-              <h3 class="stage-title-text serif">Engajadas IG + Vídeos 50%+</h3>
-            </div>
-
-            <ul class="tech-specs-list">
-              <li>
-                <svg class="tech-ico" viewBox="0 0 24 24" fill="none" stroke="#6D28D9" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-                <span><strong>Interações no Instagram:</strong> Mulheres que curtiram ou comentaram nos últimos 60 dias</span>
-              </li>
-              <li>
-                <svg class="tech-ico" viewBox="0 0 24 24" fill="none" stroke="#6D28D9" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                <span><strong>Vídeos de Provador:</strong> Quem assistiu mais da metade dos Reels de look</span>
-              </li>
-              <li>
-                <svg class="tech-ico" viewBox="0 0 24 24" fill="none" stroke="#6D28D9" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
-                <span><strong>Visitantes do Site:</strong> Quem visitou a Nuvemshop nos últimos 30 dias</span>
-              </li>
-              <li>
-                <svg class="tech-ico" viewBox="0 0 24 24" fill="none" stroke="#6D28D9" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
-                <span><strong>Exclusão Obrigatória:</strong> Quem já comprou nos últimos 30 dias</span>
-              </li>
+            <h3 class="card-title serif">Engajadas do Instagram + Bio 60D</h3>
+            <ul class="card-specs">
+              <li><strong>Público:</strong> Mulheres que interagiram com posts/reels nos últimos 60 dias</li>
+              <li><strong>Pixel:</strong> Quem acessou o link na bio da Stay Style recentemente</li>
+              <li><strong>Volume:</strong> Audiência altamente propensa a comprar</li>
             </ul>
-
-            <!-- Explicação Técnica Embaixo do Bloco -->
-            <div class="stage-explanation-box exp-c3">
-              <span class="exp-header">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-                Como funciona a segmentação?
-              </span>
-              Não gasta 1 centavo com pessoas estranhas. O anúncio só é disparado na tela de quem já demonstrou forte interesse pela marca Stay Style.
+            <div class="rationale-box c3">
+              <strong>Anúncio Amigável:</strong> Aparece de forma natural lembrando que a peça que ela viu ainda está disponível.
             </div>
           </div>
 
-          <!-- Seta Conectora -->
-          <div class="arrow-line-down c3"></div>
+          <div class="arrow-down c3"></div>
 
-          <!-- 3. CRIATIVOS 3 (SPLIT DE 2 ANÚNCIOS) -->
-          <div class="creatives-row-grid">
-
-            <!-- Criativo 3A -->
-            <div class="creative-box-item">
-              <div>
-                <div class="c-badge-top">
-                  <span class="c-format-tag">
-                    <!-- Shield Icon -->
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#6D28D9" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                    Quebra de Objeção
-                  </span>
-                  <span class="c-time-tag">Garantia</span>
-                </div>
-                <div class="c-heading">
-                  Medo de Tamanho
-                </div>
-                <div class="c-hook-quote">
-                  "Ficou em dúvida no caimento? A 1ª troca é grátis e nós te auxiliamos no WhatsApp."
-                </div>
+          <!-- Criativo 3A (Fotorrealista) -->
+          <div class="creative-visual-card">
+            <div class="creative-img-wrap">
+              <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=750&q=85" alt="Modelagem e Medidas Alfaiataria Stay Style" class="creative-img" loading="lazy">
+              <span class="reels-badge-overlay">📏 Feed / Stories • Objeção Zero</span>
+              <span class="reels-format-pill">AD 3A</span>
+            </div>
+            <div class="creative-content">
+              <h4 class="creative-title serif">"Quebrando o Medo do Tamanho Online"</h4>
+              <div class="script-summary">
+                <div class="script-step"><strong>Mensagem Central:</strong> "Tem medo de comprar roupa pela internet e errar o caimento? Antes de despachar sua peça, nossa consultora confere suas medidas exatas no WhatsApp para garantir caimento sob medida."</div>
+                <div class="script-step"><strong>CTA:</strong> "Fale direto com a nossa equipe no WhatsApp!"</div>
               </div>
-              <p class="c-desc-text">
-                Elimina a última trava psicológica que impedia a cliente de passar o cartão.
-              </p>
-            </div>
-
-            <!-- Criativo 3B -->
-            <div class="creative-box-item">
-              <div>
-                <div class="c-badge-top">
-                  <span class="c-format-tag">
-                    <!-- Star Review Icon -->
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="#6D28D9"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    Prova Social
-                  </span>
-                  <span class="c-time-tag">Depoimentos</span>
-                </div>
-                <div class="c-heading">
-                  Elogios Reais
-                </div>
-                <div class="c-hook-quote">
-                  Prints reais de clientes satisfeitas elogiando a elegância e o tecido.
-                </div>
-              </div>
-              <p class="c-desc-text">
-                A aprovação de outras mulheres gera o senso de pertencimento e acelera o fechamento.
-              </p>
-            </div>
-
-          </div>
-
-          <!-- Seta Conectora -->
-          <div class="arrow-line-down c3"></div>
-
-          <!-- 4. DESTINO 3 -->
-          <div class="stage-card destination-stage-card" style="background:#FBF7FD; border: 1.5px solid #DDD6FE;">
-            <div class="stage-card-header">
-              <span class="stage-tag" style="background:#EDE9FE; color:#5B21B6;">4. DESTINO FINAL</span>
-              <span class="stage-budget-badge" style="color:#6D28D9;">Fechamento Rápido</span>
-            </div>
-
-            <div class="stage-title-row">
-              <div class="official-icon-box" style="background:#6D28D9; border-color:#6D28D9;">
-                <!-- Lightning Checkout Icon -->
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="#FFFFFF">
-                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
-                </svg>
-              </div>
-              <h3 class="stage-title-text serif">WhatsApp Direto ou Checkout</h3>
-            </div>
-
-            <ul class="tech-specs-list">
-              <li>
-                <svg class="tech-ico" viewBox="0 0 24 24" fill="none" stroke="#6D28D9" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                <span><strong>Atendimento com Fila Zero:</strong> Resposta imediata para fechar</span>
-              </li>
-              <li>
-                <svg class="tech-ico" viewBox="0 0 24 24" fill="none" stroke="#6D28D9" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>
-                <span><strong>Incentivo Exclusivo:</strong> Cupom de frete ou mimo na 1ª compra</span>
-              </li>
-              <li>
-                <svg class="tech-ico" viewBox="0 0 24 24" fill="none" stroke="#6D28D9" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-                <span><strong>Taxa de Conversão:</strong> Mais de 20% das abordadas fecham pedido</span>
-              </li>
-            </ul>
-
-            <div class="stage-explanation-box exp-c3">
-              <span class="exp-header">Como ocorre a conversão final?</span>
-              É a colheita do funil. O remarketing recupera as vendas que a agência antiga perdeu por não fazer acompanhamento sistemático, gerando lucro limpo para a Stay Style.
             </div>
           </div>
 
         </div>
 
       </div>
+
+      <!-- NÍVEL 4: DESTINOS DE CONVERSÃO -->
+      <div class="destinos-section">
+        <div class="destinos-header">
+          <span class="step-tag" style="background:#F3ECE4; color:var(--text-main); margin-bottom:6px;">
+            ETAPA FINAL • CONVERSÃO & VENDA
+          </span>
+          <h3 class="serif" style="font-size:24px; color:var(--text-main);">Para Onde Conduzimos as Clientes Qualificadas</h3>
+        </div>
+
+        <div class="destinos-grid">
+          <div class="destino-box">
+            <div class="destino-ico-row">
+              <div class="destino-ico">📱</div>
+              <div class="destino-title">Página Link na Bio Oficial</div>
+            </div>
+            <div class="destino-desc">
+              Página oficial <strong>staystyle.jpstudio.tech</strong> com Meta Pixel ativo e canalização direta para WhatsApp e reservas da nova coleção.
+            </div>
+          </div>
+
+          <div class="destino-box">
+            <div class="destino-ico-row">
+              <div class="destino-ico">👑</div>
+              <div class="destino-title">Grupo VIP de WhatsApp</div>
+            </div>
+            <div class="destino-desc">
+              Comunidade exclusiva para lançamentos antecipados, provadores fechados e ofertas especiais sem custo de anúncio recorrente.
+            </div>
+          </div>
+
+          <div class="destino-box">
+            <div class="destino-ico-row">
+              <div class="destino-ico">📍</div>
+              <div class="destino-title">Showroom Santo André</div>
+            </div>
+            <div class="destino-desc">
+              Alameda Vieira de Carvalho, 46 • Santa Terezinha. Atendimento presencial com café e prova de alfaiataria com hora marcada.
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
 
-    <!-- Deck Resumo dos Indicadores e Metas -->
-    <div class="summary-metrics-deck">
-      <div class="deck-metrics-grid">
-        <div>
-          <div class="deck-num">R$ 500,00</div>
-          <div class="deck-desc">Verba Semanal Total</div>
-        </div>
-        <div>
-          <div class="deck-num">R$ 71,40</div>
-          <div class="deck-desc">Consumo Médio / Dia</div>
-        </div>
-        <div>
-          <div class="deck-num">250 a 400</div>
-          <div class="deck-desc">Visitas Qualificadas no Link / Mês</div>
-        </div>
-        <div>
-          <div class="deck-num">20 a 30</div>
-          <div class="deck-desc">Meta de Vendas / Mês 1</div>
-        </div>
-      </div>
-    </div>
-
-    
-    <!-- ======================================================= -->
-    <!-- NOVA SEÇÃO: REMOTION REELS STUDIO (SIMULADOR DE VÍDEO)   -->
-    <!-- ======================================================= -->
-    <div class="remotion-studio-sec reveal-item" style="margin-top: 50px;">
-      <div class="remotion-header-row">
-        <div>
-          <span class="remotion-badge">⚡ Remotion Reels Studio • Motion & Áudio IA</span>
-          <h2 class="serif" style="font-size: 26px; margin-top: 8px; color: var(--text-dark);">Como o Anúncio Vai Aparecer no Feed do Instagram</h2>
-        </div>
-        <div style="font-size: 13px; color: var(--text-muted); text-align: right;">
-          Simulação com <strong>legendas dinâmicas animadas</strong> e <strong>locução em áudio sincronizada</strong>.
-        </div>
-      </div>
-
-      <div class="remotion-grid">
-        <!-- Mockup Smartphone iPhone 16 Pro com Reels Ativo -->
-        <div class="phone-mockup-frame">
-          <div class="phone-screen">
-            <div class="phone-dynamic-island"></div>
-            <img id="phoneVideoImg" src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=85" class="phone-video-bg" alt="Reels Preview">
-            
-            <!-- Legendas Dinâmicas Remotion Style -->
-            <div class="remotion-captions-box">
-              <span class="remotion-word" id="rw1">O</span>
-              <span class="remotion-word" id="rw2">CAIMENTO</span>
-              <span class="remotion-word" id="rw3">PERFEITO</span>
-              <br>
-              <span class="remotion-word" id="rw4">DA</span>
-              <span class="remotion-word highlight" id="rw5">ALFAIATARIA</span>
-              <span class="remotion-word" id="rw6">STAY STYLE</span>
-            </div>
-
-            <!-- UI Instagram Reels -->
-            <div class="phone-instagram-ui">
-              <div class="phone-author-row">
-                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QBYRXhpZgAATU0AKgAAAAgAAgESAAMAAAABAAEAAIdpAAQAAAABAAAAJgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAOKADAAQAAAABAAAAOAAAAABwYm1wAAAAAP/bAEMABQMEBAQDBQQEBAUFBQYHChgGBwcHCwldHCEZJyYmJicmHyUpNTktLT4tJicmO0c1OT0/Pz8/PktLTE4+PTw+P//bAEMBBQUFBwYHDggIDj4pICY+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+//AABEIAAwADAMBEQACEQEDEQH/xAAWAAEBAQAAAAAAAAAAAAAAAAAAAgj/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AM3x+f/Z" class="phone-avatar-mini" alt="Stay Style">
-                <div>
-                  <div class="phone-author-name">staystyle_oficial · Seguir</div>
-                  <div style="font-size: 10px; opacity: 0.85;">Áudio Original • Evelin Ramalho</div>
-                </div>
-              </div>
-              <div class="phone-actions-col">
-                <div class="phone-action-item"><span>🤍</span><span>2.4k</span></div>
-                <div class="phone-action-item"><span>💬</span><span>182</span></div>
-                <div class="phone-action-item"><span>↗️</span><span>Share</span></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Coluna de Controles e Seleção do Roteiro -->
-        <div class="remotion-controls-col">
-          <p style="font-size: 14px; color: var(--text-body); line-height: 1.6;">
-            Selecione o anúncio abaixo para alternar a prévia do vídeo, as legendas cinemáticas animadas e o teste da locução em áudio com inteligência artificial:
-          </p>
-
-          <div class="script-select-card active" onclick="selectStudioScript(1)">
-            <div style="display:flex; align-items:center;">
-              <div class="script-card-num">01</div>
-              <div>
-                <strong style="font-size: 14px; color: var(--text-dark); display:block;">Roteiro 1 • "O Caimento da Alfaiataria Feminina"</strong>
-                <span style="font-size: 12px; color: var(--text-muted);">Quebra a objeção de linho áspero · Prova do caimento estruturado</span>
-              </div>
-            </div>
-            <button type="button" class="btn-audio-play" onclick="event.stopPropagation(); playElevenLabsVoice(1, this);">▶</button>
-          </div>
-
-          <div class="script-select-card" onclick="selectStudioScript(2)">
-            <div style="display:flex; align-items:center;">
-              <div class="script-card-num">02</div>
-              <div>
-                <strong style="font-size: 14px; color: var(--text-dark); display:block;">Roteiro 2 • "1 Peça, 3 Looks Diferentes"</strong>
-                <span style="font-size: 12px; color: var(--text-muted);">Versatilidade · Trabalho, Almoço de Domingo e Noite Sofisticada</span>
-              </div>
-            </div>
-            <button type="button" class="btn-audio-play" onclick="event.stopPropagation(); playElevenLabsVoice(2, this);">▶</button>
-          </div>
-
-          <div class="script-select-card" onclick="selectStudioScript(3)">
-            <div style="display:flex; align-items:center;">
-              <div class="script-card-num">03</div>
-              <div>
-                <strong style="font-size: 14px; color: var(--text-dark); display:block;">Roteiro 3 • "Quebrando o Medo do Tamanho Online"</strong>
-                <span style="font-size: 12px; color: var(--text-muted);">Consultora humana no WhatsApp que confere as medidas antes do envio</span>
-              </div>
-            </div>
-            <button type="button" class="btn-audio-play" onclick="event.stopPropagation(); playElevenLabsVoice(3, this);">▶</button>
-          </div>
-
-          <div style="background:#FFF9F6; border:1px solid #FCD6C9; border-radius:14px; padding:14px 18px; font-size:13px; color:#9E3210;">
-            ✨ <strong>Orientação de Gravação para Evelin:</strong> Não precisa de equipamento caro de estúdio. A iluminação natural do showroom na Alameda Vieira de Carvalho, 46 com o celular no tripé na vertical gera muito mais conexão e autoridade do que um comercial artificial de TV.
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ======================================================= -->
-    <!-- NOVA SEÇÃO: BASTIDORES DO SHOWROOM & CONVERSÃO WHATSAPP  -->
-    <!-- ======================================================= -->
-    <div style="margin-top: 55px; margin-bottom: 45px;" class="reveal-item">
-      <div style="text-align: center; margin-bottom: 28px;">
-        <span class="stage-tag" style="background:#FFFFFF; border:1px solid var(--border); color:var(--text-dark); margin:0 auto 10px auto;">
-          📍 EXPERIÊNCIA DO CLIENTE
-        </span>
-        <h2 class="serif" style="font-size: 28px; color: var(--text-dark);">A Conexão Entre o Tráfego Digital e as Vendas Reais</h2>
-        <p style="font-size: 14px; color: var(--text-muted); max-width: 650px; margin: 8px auto 0 auto;">
-          O objetivo dos anúncios não é apenas conseguir "curtidas", mas trazer clientes qualificadas para o provador do showroom e para o atendimento VIP no WhatsApp.
-        </p>
-      </div>
-
-      <div class="showroom-gallery-grid">
-        <!-- Card 1: Showroom Físico -->
-        <div class="showroom-photo-card">
-          <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=85" alt="Showroom Stay Style Santo André" class="showroom-card-img" loading="lazy">
-          <div class="showroom-card-content">
-            <h4>Showroom Exclusivo em Santo André</h4>
-            <p>Alameda Vieira de Carvalho, 46 • Santa Terezinha. Espaço intimista com atendimento personalizado com hora marcada.</p>
-          </div>
-        </div>
-
-        <!-- Card 2: Simulação de Atendimento no WhatsApp -->
-        <div class="showroom-photo-card">
-          <div style="padding: 14px; background:#075E54; color:#FFFFFF; font-size:12px; font-weight:700; display:flex; align-items:center; gap:8px;">
-            <span>💬 Conversão Real no WhatsApp Stay Style</span>
-          </div>
-          <div class="whatsapp-simulation-box" style="border-radius:0; border:none; height:190px; justify-content:center;">
-            <div class="chat-bubble bubble-customer">
-              Olá! Vi o reels da alfaiataria em linho puro... vcs têm o colete no tamanho M?
-              <span class="chat-time">14:32</span>
-            </div>
-            <div class="chat-bubble bubble-store">
-              Olá Marina! 🤍 Temos sim! O caimento dele é estruturado e forrado. Quer que eu separe aqui no showroom ou envio suas medidas exatas?
-              <span class="chat-time">14:33</span>
-            </div>
-          </div>
-          <div class="showroom-card-content">
-            <h4>Atendimento Humanizado (Sem Robôs)</h4>
-            <p>Clientes de Santo André e ABC recebem atendimento consultivo, gerando vendas de ticket médio superior a R$ 450,00.</p>
-          </div>
-        </div>
-
-        <!-- Card 3: Alfaiataria & Detalhes -->
-        <div class="showroom-photo-card">
-          <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=85" alt="Alfaiataria Feminina Fina" class="showroom-card-img" loading="lazy">
-          <div class="showroom-card-content">
-            <h4>Cortes Atemporais & Linho Puro</h4>
-            <p>Peças pensadas para mulheres contemporâneas que buscam sofisticação sem abrir mão do conforto e durabilidade.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Bottom Action CTA Panel -->
-    <div class="bottom-cta-panel">
-      <h2 class="serif">Estrutura Pronta para a Ativação Oficial</h2>
+    <!-- PAINEL CTA EXECUTIVO -->
+    <div class="cta-panel">
+      <h2 class="serif">Estrutura 100% Pronta para a Ativação Oficial</h2>
       <p>
-        Evelin, este é o mapa exato do tráfego profissional que vai conduzir a Stay Style a partir do dia 21 de Setembro. Tudo configurado nos padrões oficiais do Meta Ads Manager.
+        Evelin, este é o mapa claro de onde cada centavo do seu orçamento vai trabalhar. Sem achismos, sem queimar caixa e com foco total em vendas reais a partir do dia 21 de Setembro.
       </p>
-      <a href="https://wa.me/5511968375920?text=Ol%C3%A1%20Evelin!%20Aqui%20est%C3%A1%20o%20fluxograma%20oficial%20e%20moderno%20das%20nossas%20campanhas%20da%20Stay%20Style." class="btn-action-whatsapp" target="_blank">
-        <!-- WhatsApp Icon Official -->
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+
+      <a href="https://wa.me/5511968375920?text=Ol%C3%A1%20Evelin!%20Aqui%20est%C3%A1%20o%20fluxograma%20oficial%20das%20nossas%20campanhas%20da%20Stay%20Style." class="btn-wa-action" target="_blank">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
           <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/>
         </svg>
-        <span>Compartilhar Fluxograma com a Evelin</span>
+        <span>Compartilhar com Evelin no WhatsApp</span>
       </a>
+
+      <div class="autoridade-pills">
+        <span>✓ Baseado na metodologia Meta Performance 5</span>
+        <span>✓ Validação de Tráfego Regional (Pedro Sobral)</span>
+        <span>✓ Engenharia JPStudio</span>
+      </div>
     </div>
 
   </div>
-
-
-  <!-- MODAL DE ROTEIRO INTERATIVO PARA GRAVAÇÃO -->
-  <div id="scriptModal" class="script-modal-backdrop" onclick="closeScriptModal(event)">
-    <div class="script-modal-card" onclick="event.stopPropagation()">
-      <button class="modal-close-btn" onclick="closeScriptModal(null)">&times;</button>
-      
-      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 6px;">
-        <span class="rec-indicator"><span class="rec-dot"></span> Roteiro Oficial para Evelin</span>
-        <span style="font-size: 11px; background: #FFF0EB; color: #D94819; font-weight: 700; padding: 2px 8px; border-radius: 10px;">Formato Reels 9:16 (20s a 35s)</span>
-      </div>
-
-      <h2 id="modalScriptTitle" class="serif" style="font-size: 22px; color: var(--text-dark);">AD 1A • Roteiro de Provador</h2>
-      <p id="modalScriptDesc" style="font-size: 13px; color: var(--text-muted); margin-bottom: 12px;">Grave na luz natural do showroom em Santo André ou no espelho com celular na vertical.</p>
-
-      <div class="modal-tab-nav">
-        <button class="modal-tab-btn active" id="tab-btn-1" onclick="switchScriptTab(1)">Roteiro 1 (Caimento)</button>
-        <button class="modal-tab-btn" id="tab-btn-2" onclick="switchScriptTab(2)">Roteiro 2 (1 Peça 3 Looks)</button>
-        <button class="modal-tab-btn" id="tab-btn-3" onclick="switchScriptTab(3)">Roteiro 3 (Tamanho & Medo)</button>
-      </div>
-
-      <div class="script-content-section" id="modalScriptBody">
-        <!-- Conteúdo dinâmico injetado via JS -->
-      </div>
-
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
-        <span style="font-size: 12px; color: var(--text-muted);">💡 Dica do Gestor: Fale sorrindo e vista a peça com movimentos naturais.</span>
-        <button type="button" class="btn-pdf" onclick="copyScriptText()" style="font-size: 12px; padding: 8px 16px;">
-          <span>📋 Copiar Script</span>
-        </button>
-      </div>
-    </div>
-  </div>
-
-
-  <script>
-    (function(){
-      // ==========================================
-      // 1. EFEITO 3D TILT COM ILUMINAÇÃO DINÂMICA
-      // ==========================================
-      var cards = document.querySelectorAll('.stage-card, .meta-root-box, .metric-pill-card');
-      
-      cards.forEach(function(card){
-        var glare = card.querySelector('.card-glare');
-        if(!glare){
-          glare = document.createElement('div');
-          glare.className = 'card-glare';
-          card.appendChild(glare);
-        }
-
-        card.addEventListener('mousemove', function(e){
-          var rect = card.getBoundingClientRect();
-          var x = e.clientX - rect.left;
-          var y = e.clientY - rect.top;
-          var centerX = rect.width / 2;
-          var centerY = rect.height / 2;
-
-          var rotateX = ((y - centerY) / centerY) * -7;
-          var rotateY = ((x - centerX) / centerX) * 7;
-
-          card.style.transform = 'perspective(1000px) rotateX(' + rotateX.toFixed(2) + 'deg) rotateY(' + rotateY.toFixed(2) + 'deg) translateY(-4px)';
-          card.style.boxShadow = '0 18px 40px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.04)';
-
-          // Atualizar reflexo de luz (glare)
-          var glareX = (x / rect.width) * 100;
-          var glareY = (y / rect.height) * 100;
-          glare.style.opacity = '0.35';
-          glare.style.background = 'radial-gradient(circle at ' + glareX + '% ' + glareY + '%, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0) 65%)';
-        });
-
-        card.addEventListener('mouseleave', function(){
-          card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0)';
-          card.style.boxShadow = '';
-          glare.style.opacity = '0';
-        });
-      });
-
-      // ==========================================
-      // 2. FILTRO INTERATIVO POR FOCO DE CAMPANHA
-      // ==========================================
-      var filterTabs = document.querySelectorAll('.filter-tab');
-      var grid = document.querySelector('.flow-columns-grid');
-
-      filterTabs.forEach(function(tab){
-        tab.addEventListener('click', function(){
-          filterTabs.forEach(function(t){ t.classList.remove('active'); });
-          tab.classList.add('active');
-
-          var filter = tab.dataset.filter;
-          grid.classList.remove('focus-c1', 'focus-c2', 'focus-c3');
-          if(filter !== 'all'){
-            grid.classList.add('focus-' + filter);
-          }
-        });
-      });
-
-      // ==========================================
-      // 3. SIMULADOR INTERATIVO DE ORÇAMENTO
-      // ==========================================
-      var budgetBtns = document.querySelectorAll('.btn-budget-val');
-      var elPacing = document.querySelector('.metric-pill-card:nth-child(1) .metric-main-value');
-      var elSubPacing = document.querySelector('.metric-pill-card:nth-child(1) .metric-sub-detail');
-      var elRootBudget = document.querySelector('.meta-budget-pill');
-
-      var c1BudgetBadge = document.querySelector('.card-c1 .stage-budget-badge');
-      var c2BudgetBadge = document.querySelector('.card-c2 .stage-budget-badge');
-      var c3BudgetBadge = document.querySelector('.card-c3 .stage-budget-badge');
-
-      budgetBtns.forEach(function(btn){
-        btn.addEventListener('click', function(){
-          budgetBtns.forEach(function(b){ b.classList.remove('active'); });
-          btn.classList.add('active');
-
-          var val = parseInt(btn.dataset.budget);
-          var daily = (val / 7).toFixed(2).replace('.', ',');
-          var valFormatted = 'R$ ' + val.toLocaleString('pt-BR') + ',00';
-
-          if(elPacing) elPacing.textContent = valFormatted;
-          if(elSubPacing) elSubPacing.textContent = '~R$ ' + daily + ' / dia';
-          if(elRootBudget) {
-            elRootBudget.innerHTML = '<span>Orçamento Global: ' + valFormatted + ' / semana</span><span>•</span><span>Pacing Diário: ~R$ ' + daily + ' / dia</span>';
-          }
-
-          // Atualizar badges das 3 campanhas proporcionais (50%, 30%, 20%)
-          var c1Val = (val * 0.50 / 7).toFixed(2).replace('.', ',');
-          var c2Val = (val * 0.30 / 7).toFixed(2).replace('.', ',');
-          var c3Val = (val * 0.20 / 7).toFixed(2).replace('.', ',');
-
-          if(c1BudgetBadge) c1BudgetBadge.textContent = 'R$ ' + c1Val + '/dia (50%)';
-          if(c2BudgetBadge) c2BudgetBadge.textContent = 'R$ ' + c2Val + '/dia (30%)';
-          if(c3BudgetBadge) c3BudgetBadge.textContent = 'R$ ' + c3Val + '/dia (20%)';
-        });
-      });
-
-      // ==========================================
-      // 4. STAGGERED SCROLL REVEAL (Cascata)
-      // ==========================================
-      var reveals = document.querySelectorAll('.stage-card, .metric-pill-card, .explanation-card, .meta-root-box, .control-toolbar');
-      var obs = new IntersectionObserver(function(entries){
-        entries.forEach(function(entry){
-          if(entry.isIntersecting){
-            entry.target.classList.add('revealed');
-            obs.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.12 });
-
-      reveals.forEach(function(el, idx){
-        el.classList.add('reveal-item');
-        el.style.transitionDelay = (idx % 3 * 0.12) + 's';
-        obs.observe(el);
-      });
-
-    })();
-
-    // ==========================================
-    // 5. BANCO DE ROTEIROS DE PROVADOR DINÂMICO
-    // ==========================================
-    var scriptData = {
-      1: {
-        title: 'AD 1A • O Caimento da Alfaiataria Feminina',
-        desc: 'Foco em destacar o linho puro, acabamento interno e toque sofisticado.',
-        html: `
-          <div class="script-timeline-step">
-            <span class="script-step-tag tag-hook">0s a 3s • GANCHO VISUAL & AUDIO</span>
-            <p><strong>Cena:</strong> Evelin em plano médio vestindo o blazer ou colete de alfaiataria em linho, ajustando os punhos com elegância.</p>
-            <p><strong>Fala da Evelin:</strong> <em>"Você também está cansada de comprar alfaiataria que parece sofisticada na foto, mas quando chega em casa o tecido esquenta e amassa parecendo papel?"</em></p>
-          </div>
-          <div class="script-timeline-step">
-            <span class="script-step-tag tag-body">4s a 18s • CORPO & DIFERENCIAL STAY STYLE</span>
-            <p><strong>Cena:</strong> Câmera aproxima (close-up) nos pontos de costura, botões encapados e textura do linho puro. Evelin dá uma volta completa no espelho do showroom.</p>
-            <p><strong>Fala da Evelin:</strong> <em>"Aqui na Stay Style nós desenvolvemos peças pensadas na rotina da mulher real: forro respirável, ombreira estruturada na medida certa e corte que valoriza a cintura sem apertar. É a peça que você veste de manhã e continua impecável até o jantar."</em></p>
-          </div>
-          <div class="script-timeline-step">
-            <span class="script-step-tag tag-cta">19s a 25s • CTA REGIONAL</span>
-            <p><strong>Fala da Evelin:</strong> <em>"Clique no link do nosso perfil para conferir a nova coleção online ou agendar uma visita exclusiva aqui no nosso showroom em Santo André!"</em></p>
-          </div>`
-      },
-      2: {
-        title: 'AD 1B • 1 Peça, 3 Looks Diferentes',
-        desc: 'Foco em versatilidade, custo-benefício e inteligência de guarda-roupa.',
-        html: `
-          <div class="script-timeline-step">
-            <span class="script-step-tag tag-hook">0s a 3s • GANCHO DE CURIOSIDADE</span>
-            <p><strong>Cena:</strong> Evelin com o Colete de Alfaiataria Cru na mão, estalando os dedos em transição rápida.</p>
-            <p><strong>Fala da Evelin:</strong> <em>"Três ocasiões completamente diferentes com a mesma peça-chave da Stay Style. Olha como transformar o seu guarda-roupa:"</em></p>
-          </div>
-          <div class="script-timeline-step">
-            <span class="script-step-tag tag-body">4s a 20s • DEMONSTRAÇÃO DOS 3 LOOKS</span>
-            <p><strong>Look 1 (Office Chic):</strong> Colete fechado com calça pantalona de linho e salto bloco. <em>"Reunião de negócios com autoridade e elegância."</em></p>
-            <p><strong>Look 2 (Casual Almoço):</strong> Colete aberto com regata básica de seda, jeans reto e mocassim. <em>"Despojado chic para um almoço de domingo."</em></p>
-            <p><strong>Look 3 (Noite Sofisticada):</strong> Colete como top com blazer jogado nos ombros e acessórios dourados. <em>"Pronta para um jantar especial sem esforço."</em></p>
-          </div>
-          <div class="script-timeline-step">
-            <span class="script-step-tag tag-cta">21s a 28s • CTA DIRETO</span>
-            <p><strong>Fala da Evelin:</strong> <em>"Descubra as peças atemporais da nossa coleção cápsula no link da nossa bio!"</em></p>
-          </div>`
-      },
-      3: {
-        title: 'AD 1C • Quebrando o Medo do Tamanho Online',
-        desc: 'Foco em eliminar a maior objeção de compra de moda e conduzir para o WhatsApp.',
-        html: `
-          <div class="script-timeline-step">
-            <span class="script-step-tag tag-hook">0s a 4s • QUEBRA DE OBJEÇÃO DIRETA</span>
-            <p><strong>Cena:</strong> Evelin segurando uma fita métrica com ar acolhedor e sorridente no showroom.</p>
-            <p><strong>Fala da Evelin:</strong> <em>"Tem medo de comprar roupa pela internet e errar o caimento ou o tamanho? Eu te entendo perfeitamente, e é por isso que na Stay Style fazemos diferente."</em></p>
-          </div>
-          <div class="script-timeline-step">
-            <span class="script-step-tag tag-body">5s a 18s • PROVA DO ATENDIMENTO HUMANIZADO</span>
-            <p><strong>Cena:</strong> Evelin mostrando no celular uma conversa real com cliente tirando medidas de busto e quadril.</p>
-            <p><strong>Fala da Evelin:</strong> <em>"Antes de despachar o seu pedido, nossa consultora de estilo conversa com você no WhatsApp, confere suas medidas exatas e garante que a modelagem vai vestir como se tivesse sido feita sob medida para o seu corpo."</em></p>
-          </div>
-          <div class="script-timeline-step">
-            <span class="script-step-tag tag-cta">19s a 26s • CTA CONCIERGE</span>
-            <p><strong>Fala da Evelin:</strong> <em>"Clique no link e fale direto com a nossa equipe no WhatsApp. Vamos encontrar o tamanho perfeito para você!"</em></p>
-          </div>`
-      }
-    };
-
-    var currentScriptId = 1;
-
-    function openScriptModal(id){
-      currentScriptId = id || 1;
-      switchScriptTab(currentScriptId);
-      var modal = document.getElementById('scriptModal');
-      if(modal) modal.classList.add('active');
-    }
-
-    function closeScriptModal(e){
-      var modal = document.getElementById('scriptModal');
-      if(modal) modal.classList.remove('active');
-    }
-
-    function switchScriptTab(id){
-      currentScriptId = id;
-      document.querySelectorAll('.modal-tab-btn').forEach(function(b, idx){
-        b.classList.toggle('active', (idx + 1) === id);
-      });
-      var data = scriptData[id];
-      if(!data) return;
-      document.getElementById('modalScriptTitle').textContent = data.title;
-      document.getElementById('modalScriptDesc').textContent = data.desc;
-      document.getElementById('modalScriptBody').innerHTML = data.html;
-    }
-
-    function copyScriptText(){
-      var data = scriptData[currentScriptId];
-      if(!data) return;
-      var text = data.title + '\n\n' + document.getElementById('modalScriptBody').innerText;
-      navigator.clipboard.writeText(text).then(function(){
-        alert('✅ Roteiro copiado com sucesso para a área de transferência!');
-      });
-    }
-  </script>
-
-  <script>
-    // ========================================================
-    // 6. SINTETIZADOR DE VOZ IA (ESTILO ELEVENLABS PREVIEW)
-    // ========================================================
-    var currentSpeech = null;
-    var activeAudioBar = null;
-
-    var scriptVoiceTexts = {
-      1: "Você também está cansada de comprar alfaiataria que parece linda na foto, mas quando chega em casa o tecido esquenta e amassa parecendo papel? Aqui na Stay Style nós desenvolvemos peças pensadas na rotina da mulher real: forro respirável, ombreira estruturada na medida certa e corte que valoriza a cintura sem apertar. Clique no link da nossa bio para conhecer a coleção ou agendar uma visita no nosso showroom em Santo André!",
-      2: "Três ocasiões completamente diferentes com a mesma peça-chave da Stay Style! Primeiro: reunião de negócios com calça pantalona de linho e salto bloco. Segundo: almoço de domingo despojado chic com jeans reto e mocassim. Terceiro: jantar especial com blazer nos ombros e acessórios dourados. Descubra a coleção cápsula no link da nossa bio!",
-      3: "Tem medo de comprar roupa pela internet e errar o caimento ou o tamanho? Eu te entendo perfeitamente, e é por isso que na Stay Style fazemos diferente. Antes de despachar o seu pedido, nossa consultora conversa com você no WhatsApp, confere suas medidas exatas de busto e quadril e garante que vai vestir sob medida. Fale conosco no WhatsApp!"
-    };
-
-    function playElevenLabsVoice(id, btnElement){
-      var bar = btnElement.closest('.elevenlabs-bar') || document.querySelector('.remotion-studio-sec');
-      
-      // Se já estiver tocando o mesmo, pausa
-      if(window.speechSynthesis && window.speechSynthesis.speaking){
-        window.speechSynthesis.cancel();
-        if(activeAudioBar) activeAudioBar.classList.remove('playing');
-        if(btnElement.textContent === '⏸') {
-          btnElement.textContent = '▶';
-          return;
-        }
-      }
-
-      document.querySelectorAll('.btn-audio-play').forEach(function(b){ b.textContent = '▶'; });
-      document.querySelectorAll('.elevenlabs-bar').forEach(function(b){ b.classList.remove('playing'); });
-
-      btnElement.textContent = '⏸';
-      if(bar && bar.classList.contains('elevenlabs-bar')) {
-        bar.classList.add('playing');
-        activeAudioBar = bar;
-      }
-
-      if('speechSynthesis' in window){
-        var utterance = new SpeechSynthesisUtterance(scriptVoiceTexts[id] || scriptVoiceTexts[1]);
-        utterance.lang = 'pt-BR';
-        utterance.rate = 1.05; // Ritmo dinâmico de Reels
-        utterance.pitch = 1.15; // Tom feminino natural
-
-        // Buscar voz feminina brasileira se disponível
-        var voices = window.speechSynthesis.getVoices();
-        var brVoice = voices.find(function(v){ return v.lang === 'pt-BR' && (v.name.includes('Luciana') || v.name.includes('Yara') || v.name.includes('Maria') || v.name.includes('Female') || v.name.includes('Google português do Brasil')); });
-        if(brVoice) utterance.voice = brVoice;
-
-        utterance.onend = function(){
-          btnElement.textContent = '▶';
-          if(activeAudioBar) activeAudioBar.classList.remove('playing');
-        };
-
-        utterance.onerror = function(){
-          btnElement.textContent = '▶';
-          if(activeAudioBar) activeAudioBar.classList.remove('playing');
-        };
-
-        window.speechSynthesis.speak(utterance);
-      } else {
-        alert('Seu navegador não suporta síntese de voz, mas o áudio IA foi gerado para a campanha!');
-        btnElement.textContent = '▶';
-      }
-    }
-
-    // ========================================================
-    // 7. REMOTION REELS STUDIO SWITCHER
-    // ========================================================
-    var studioPhotos = {
-      1: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=85',
-      2: 'https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=800&q=85',
-      3: 'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=800&q=85'
-    };
-
-    var studioCaptions = {
-      1: ['O', 'CAIMENTO', 'PERFEITO', 'DA', 'ALFAIATARIA', 'STAY STYLE'],
-      2: ['1 PEÇA', '3 LOOKS', 'TRABALHO', 'ALMOÇO', '&', 'JANTAR'],
-      3: ['ZERO MEDO', 'DO TAMANHO', 'CONSULTORIA', 'REAL NO', 'WHATSAPP', 'STAY']
-    };
-
-    function selectStudioScript(id){
-      document.querySelectorAll('.script-select-card').forEach(function(c, idx){
-        c.classList.toggle('active', (idx + 1) === id);
-      });
-
-      var img = document.getElementById('phoneVideoImg');
-      if(img) img.src = studioPhotos[id];
-
-      var words = studioCaptions[id] || studioCaptions[1];
-      var captionBox = document.querySelector('.remotion-captions-box');
-      if(captionBox){
-        captionBox.innerHTML = words.map(function(w, i){
-          var isHl = (i === 1 || i === 4) ? 'highlight' : '';
-          return '<span class="remotion-word ' + isHl + '">' + w + '</span>';
-        }).join(' ');
-      }
-    }
-
-    // Animar destaque das palavras estilo Remotion periodicamente
-    setInterval(function(){
-      var words = document.querySelectorAll('.remotion-captions-box .remotion-word');
-      if(words.length > 0){
-        var randIdx = Math.floor(Math.random() * words.length);
-        words.forEach(function(w){ w.classList.remove('highlight'); });
-        words[randIdx].classList.add('highlight');
-      }
-    }, 1200);
-  </script>
 
 </body>
 </html>
