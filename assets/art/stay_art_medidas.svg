@@ -1,0 +1,82 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 1334" width="750" height="1334">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAF7F2"/>
+      <stop offset="50%" stop-color="#F3ECE3"/>
+      <stop offset="100%" stop-color="#E8DFD3"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E5C788"/>
+      <stop offset="50%" stop-color="#C5A059"/>
+      <stop offset="100%" stop-color="#8F6E2C"/>
+    </linearGradient>
+    <linearGradient id="terracotaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C86D4B"/>
+      <stop offset="100%" stop-color="#9C4423"/>
+    </linearGradient>
+    <pattern id="linenTexture" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M0 15 L30 15 M15 0 L15 30" stroke="#C5A059" stroke-width="0.6" stroke-opacity="0.12"/>
+    </pattern>
+  </defs>
+
+  <!-- Fundo Texturizado Linho Nobre -->
+  <rect width="750" height="1334" fill="url(#bgGrad)"/>
+  <rect width="750" height="1334" fill="url(#linenTexture)"/>
+
+  <!-- Moldura Dupla de Luxo -->
+  <rect x="36" y="36" width="678" height="1262" fill="none" stroke="url(#goldGrad)" stroke-width="1.8" stroke-opacity="0.75"/>
+  <rect x="44" y="44" width="662" height="1246" fill="none" stroke="#1C130E" stroke-width="0.8" stroke-opacity="0.2"/>
+
+  <!-- Cabeçalho Tipográfico Editorial -->
+  <text x="375" y="130" font-family="'Playfair Display', Georgia, serif" font-size="18" font-weight="600" fill="#B87A63" text-anchor="middle" letter-spacing="6">STAY STYLE ATELIER</text>
+  <text x="375" y="195" font-family="'Playfair Display', Georgia, serif" font-size="44" font-weight="700" fill="#1C130E" text-anchor="middle" letter-spacing="2">GUIA DE MEDIDAS</text>
+  <text x="375" y="235" font-family="'Plus Jakarta Sans', sans-serif" font-size="15" font-weight="600" fill="#82756E" text-anchor="middle" letter-spacing="4">CONSULTORIA &amp; CAIMENTO EXATO</text>
+
+  <line x1="260" y1="265" x2="490" y2="265" stroke="url(#goldGrad)" stroke-width="1.5"/>
+
+  <!-- Ilustração Vetorial da Alfaiataria & Fita Métrica -->
+  <g transform="translate(375, 570)">
+    <rect x="-170" y="-230" width="340" height="400" rx="18" fill="#FFFFFF" stroke="#E8DFD5" stroke-width="1.5"/>
+    <rect x="-150" y="-210" width="130" height="170" rx="8" fill="url(#terracotaGrad)" opacity="0.1"/>
+
+    <!-- Silhueta Minimalista do Blazer -->
+    <path d="M-80 -170 L-125 -100 L-100 110 L-35 125 L0 130 L35 125 L100 110 L125 -100 L80 -170 L35 -155 L0 -120 L-35 -155 Z" fill="none" stroke="#1C130E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-35 -155 L-65 -65 L-25 -65 L-5 20" fill="none" stroke="#1C130E" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M35 -155 L65 -65 L25 -65 L5 20" fill="none" stroke="#1C130E" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Botões Dourados -->
+    <circle cx="-16" cy="-10" r="5" fill="url(#goldGrad)"/>
+    <circle cx="16" cy="-10" r="5" fill="url(#goldGrad)"/>
+    <circle cx="-16" cy="35" r="5" fill="url(#goldGrad)"/>
+    <circle cx="16" cy="35" r="5" fill="url(#goldGrad)"/>
+
+    <!-- Fita Métrica Dourada Trançada -->
+    <path d="M-150 150 C -70 100, -30 200, 40 140 C 90 100, 150 160, 175 190" fill="none" stroke="url(#goldGrad)" stroke-width="9" stroke-linecap="round"/>
+    <path d="M-150 150 C -70 100, -30 200, 40 140 C 90 100, 150 160, 175 190" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="3,6"/>
+  </g>
+
+  <!-- 3 Pilares de Confiança -->
+  <g transform="translate(100, 870)">
+    <circle cx="28" cy="28" r="22" fill="#FAF0EA"/>
+    <text x="28" y="34" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="800" fill="#B87A63" text-anchor="middle">01</text>
+    <text x="70" y="24" font-family="'Plus Jakarta Sans', sans-serif" font-size="18" font-weight="700" fill="#1C130E">Aferição de Medidas no WhatsApp</text>
+    <text x="70" y="44" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="500" fill="#82756E">Busto, cintura, quadril e comprimento conferidos antes do envio</text>
+
+    <circle cx="28" cy="98" r="22" fill="#FAF0EA"/>
+    <text x="28" y="104" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="800" fill="#B87A63" text-anchor="middle">02</text>
+    <text x="70" y="94" font-family="'Plus Jakarta Sans', sans-serif" font-size="18" font-weight="700" fill="#1C130E">Estrutura de Alta Costura &amp; Linho</text>
+    <text x="70" y="114" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="500" fill="#82756E">Ombreiras estruturadas e forro respirável que não deforma</text>
+
+    <circle cx="28" cy="168" r="22" fill="#FAF0EA"/>
+    <text x="28" y="174" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="800" fill="#B87A63" text-anchor="middle">03</text>
+    <text x="70" y="164" font-family="'Plus Jakarta Sans', sans-serif" font-size="18" font-weight="700" fill="#1C130E">Troca Fácil ou Ajuste no Showroom</text>
+    <text x="70" y="184" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="500" fill="#82756E">Showroom próprio em Santo André para prova e retirada</text>
+  </g>
+
+  <!-- Selo Inferior -->
+  <g transform="translate(375, 1170)">
+    <rect x="-190" y="-28" width="380" height="56" rx="28" fill="#1C130E"/>
+    <text x="0" y="8" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">GARANTIA DE CAIMENTO IMPECÁVEL</text>
+  </g>
+</svg>
