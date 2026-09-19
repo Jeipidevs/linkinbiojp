@@ -1,0 +1,8 @@
+# Material de cliente. A link in bio pode ser indexada; o resto não.
+User-agent: *
+Disallow: /p/
+Disallow: /campanhas
+Disallow: /campanhas/
+Disallow: /campanhas.html
+Disallow: /estrategia
+Allow: /
