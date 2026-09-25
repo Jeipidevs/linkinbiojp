@@ -70,8 +70,8 @@
 
     <circle cx="28" cy="168" r="22" fill="#FAF0EA"/>
     <text x="28" y="174" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="800" fill="#B87A63" text-anchor="middle">03</text>
-    <text x="70" y="164" font-family="'Plus Jakarta Sans', sans-serif" font-size="18" font-weight="700" fill="#1C130E">Troca Fácil ou Ajuste no Showroom</text>
-    <text x="70" y="184" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="500" fill="#82756E">Showroom próprio em Santo André para prova e retirada</text>
+    <text x="70" y="164" font-family="'Plus Jakarta Sans', sans-serif" font-size="18" font-weight="700" fill="#1C130E">Consultoria com Provador</text>
+    <text x="70" y="184" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="500" fill="#82756E">Na consultoria, as peças vão até você provar</text>
   </g>
 
   <!-- Selo Inferior -->
